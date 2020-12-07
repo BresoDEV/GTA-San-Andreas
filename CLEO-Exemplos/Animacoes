@@ -1,0 +1,780 @@
+ 
+
+"PED"
+ - "CAR_HOOKERTALK" - um tipo de postura ociosa
+ - "Fucku" - mamma mia!
+ - "WOMAN_IDLESTANCE" - permanece como uma mulher, com uma mão no quadril
+ - "CAR_SIT" - lugar do condutor pose
+ - "XPRESSSCRATCH" - olhar em volta
+ - "IDLE_CHAT" - o que todos os atores e peds fazer depois de matar alguém
+ - "IDLE_STANCE" - permanece como um homem
+ - "IDLE_ARMED" - permanece como se está segurando uma arma
+ - "IDLE_TIRED" - fora GTA clássico da respiração
+ - "FIGHTA_G" - bata no chão
+ - "CROUCH_ROLL_R" - rola para a direita da arma Crouch (agachar arma primeiro uso)
+ - "CROUCH_ROLL_L" - rola para a esquerda, de agachar arma (arma crouch primeira utilização)
+ - "TAP_HAND" - sentar no carro com a mão na porta
+ - "Encolher" - Duck and Cover
+ - "DUCK_COWER" - Duck and Cover
+ - "HANDSCOWER" - um passo de backup com as mãos para cima
+ - "ENDCHAT_01" - fim de uma seqüência de bate-papo, os braços caem
+ - "ENDCHAT_03" - onda Olá / adeus
+ - "FIGHTIDLE" - posição de combate, coloque sua vaidade
+ - "KO_SHOT_FACE" - leva um tiro no rosto e cai
+ - "KO_SHOT_FRONT" - leva um tiro e cai, como bater em um corredor de trás
+ - "KO_SHOT_STOM" - toma um tiro no estômago e cai, bem feito animação
+ - "KO_SPIN_L" - gira para a direita e cai
+ - "KO_SPIN_R" - mesmo que acima, mas para a esquerda, não como o líquido (não utilizado no jogo)
+ - "KO_SKID_BACK" - como KO_SHOT_FRONT, mas mais curto
+ - "PHONE_TALK" - falando em um telefone, como VC, parece uma porcaria com mulheres
+ - "HANDSUP" - pau em cima, mas só a marcha lenta para as mãos em parte, sem loop
+ - "ROADCROSS" - olha para os dois lados, semelhante ao XPRESSSCRATCH
+ - "ATM" - usa uma Automatic Teller Machine
+ - "WEAPON_CROUCH" - postura crouch
+ - "BIKE_FALL_OFF" - back-off animação bike cotovelada
+ - "SEAT_IDLE" - permanecer na cadeira
+ - "SEAT_DOWN" - sentar na cadeira
+ - "FLEE_LKAROUND_01" - olhar sobre os ombros de medo
+ - "GETUP_FRONT" - levantar-se da posição para baixo - de estômago
+ - "Traje" - começa a partir de posição para baixo - para trás
+ - "GUN_STAND" - arma visando postura
+ - "WALK_DRUNK" - o ator vai andar bêbado a uma distância curta, não há dados de colisão (caminhadas através de objetos)
+ - "FALL_SKYDIVE" - o ator usa a diminuir (não Acel) skydive pose
+ - "FALL_FRONT" - o ator parece que eles estão caindo (pára-quedas não)
+ - "RUN_PLAYER" - o ator executa uma distância curta, não há dados de colisão (executado por meio de objetos)
+
+"MISC"
+ - "SCRATCHBALLS_01" - Eu acho que esta é óbvio ...
+ - "Bitchslap" - o ator se ajoelha e bate o mijo fora de tudo, animação IMPRESSIONANTE
+ - "BMX_COMEON" - o ator em ondas de bicicleta para "entrar em"
+ - "BMX_CELEBRATE" - ator em tramas de bicicleta com o braço, em seguida, limpa a testa
+ - "BMX_IDLELOOP_01" - O ator de bicicleta ocioso, olha ao redor
+ - "BMX_IDLELOOP_02" - mesmo que acima, com o aceno de cabeça
+ - "BMX_TALKRIGHT_LOOP" - chat de bicicleta, os movimentos com a mão direita
+ - "BMX_TALKLEFT_LOOP" - chat de bicicleta, os movimentos com a mão esquerda
+ - "PLYR_SHKHEAD" - O ator dá um tapa na testa e balança a cabeça, como "Oy Gevault!" : P
+ - "BNG_WNDW" - o ator olha através de uma janela, em seguida, bate nela
+ - "BNG_WNDW_02" - parece que a reação acima
+ - "SEAT_TALK_01" - fala o ator (guestures) enquanto está sentado
+ - "SEAT_TALK_02" - variação acima
+ - "SEAT_WATCH" - sentar-se, olha para assistir
+ - "PASS_RIFLE_PED" - passar rifle para ped
+ - "PASS_RIFLE_PLY" - receber rifle de ped
+ - "PLYRLEAN_LOOP" - Lean contra uma parede, as pernas cruzadas
+ - "HIKER_POSE" - uma carona direito
+ - "HIKER_POSE_L" - uma carona à esquerda (por Smokin 'em vez de pegar uma carona, afinal?)
+ - "KAT_THROW_K" - Katana jogar para o jogador - de Da Nang Thang - com slick "Come on" taunt
+ - "KAT_THROW_P" - Katana captura - de Da Nang Thang
+ - "RUN_DIVE" - animação Ryder em "Pier 69"
+ - "PICKUP_BOX" - Pegar algo
+ - "GRAB_L" - Agarre a partir da esquerda
+ - "GRAB_R" - Agarre a partir da direita
+ - "PLUNGER_01" - da velha escola de animação êmbolo TNT
+ - "PLANE_EXIT" - saída do avião "Freefall"
+ - "PLANE_HIJACK" - Freefall animação ... "Freefall": p
+
+"Fumar"
+ - "M_SMKLEAN_LOOP" - ciclo de fumar, de pé
+ - "M_SMKSTND_LOOP" - ciclo de fumar, o pé contra a parede ou objeto
+ - "M_SMK_IN" - começa anim fumo (fumaça de luz)
+ - "M_SMK_OUT" - Acabamento anim fumo (fumaça de luz)
+
+"Gangs"
+ - "HNDSHKFA" - aperto de mão e abraço
+ - "HNDSHKFA_SWT" - aperto de mão e abraço 2 - semelhante ao anterior
+ - "PRTIAL_HNDSHK_BIZ_01" - business handshake
+ - "PRTIAL_GNGTLKA" - um grupo de bate-papo
+ - "PRTIAL_GNGTLKB" - grupo de bate-papo 2
+ - "PRTIAL_GNGTLKC" - grupo de bate-papo 3
+ - "PRTIAL_GNGTLKD" - grupo de bate-papo 4
+ - "PRTIAL_GNGTLKE" - grupo de bate-papo 5
+ - "PRTIAL_GNGTLKF" - grupo de bate-papo 6
+ - "PRTIAL_GNGTLKG" - grupo de bate-papo 7
+ - "PRTIAL_GNGTLKH" - grupo de bate-papo 8
+ - "PRTIAL_HNDSHK_01" - aperto de mão de gangues
+ - "DRNKBR_PRTL" - beber uma quadrilha 40
+ - "DEALER_DEAL" - grupo que tratam
+ - "DRUGS_BUY" - gangues comprar
+ - "SMKCIG_PRTL" - grupo de fumar
+
+"Dancing"
+ - "DAN_LOOP_A" - ciclo de dança gen
+ - "DNCE_M_A" - balanço de armas
+ - "DNCE_M_B" - frente e para trás uma
+ - "DNCE_M_C" - para trás 2
+ - "DNCE_M_D" - braços oscilantes (estilo anos 60)
+ - "DNCE_M_E" - frente e para trás 3
+
+"Bikes"
+ - "BIKES_SNATCH_L" - arrebatar moto esquerda (usado em "T-Bone Mendez")
+ - "BIKES_SNATCH_R" - arrebatar da direita moto (usada em "T-Bone Mendez")
+
+"Beijo"
+ - "PLAYA_KISS_01" - o jogador beijar uma (curta)
+ - "PLAYA_KISS_02" - jogador beijo 2
+ - "PLAYA_KISS_03" - jogador beijo 3
+ - "GRLFRD_KISS_01" - curta beijo
+ - "GRLFRD_KISS_02" - grande beijo
+ - "GRLFRD_KISS_03" - Cabeça de zero, então beijo (a la "desejo ardente")
+ - "GIFT_GIVE" - Dê um presente
+ - "GIFT_GET" - Adquira um presente
+ - "GFWAVE2" - ondas Girlfriend
+ - "GF_CARSPOT" - Girlfriend jogador vê na rua
+ - "GF_CARARGUE_01" - argumentam em um carro
+ - "GF_CARARGUE_02" - argumentam em carro 2
+ - "GF_STREETARGUE_02" - argumentam na rua
+
+"FIGHT_B"
+ - "FIGHTB_3" - socos rush
+ - "FIGHTB_M" - socos combo
+ - "FIGHTB_G" - soco chão
+
+"FIGHT_C"
+ - "FIGHTC_3" - chute
+ - Postura de karatê - "FIGHTC_IDLE"
+ - "FIGHTC_M" - chute de bicicleta
+
+"FIGHT_D"
+ - "FIGHTD_M" - soco curto
+ - "FIGHTD_G - Motivo chute, como VC
+ - "FIGHTD_3" - corrida de cotovelo
+
+"Ginásio"
+ - "GYMSHADOWBOX" - shadowboxing
+ - "GYM_BIKE_GETON" - chegar em bicicleta ergométrica
+ - "GYM_BIKE_SLOW" - moto andar devagar
+ - "GYM_BIKE_FAST" - rápido passeio de bicicleta
+ - "GYM_BIKE_STILL" - moto ocioso
+ - "GYM_BIKE_FASTER" - passeio de bicicleta muito rápido
+ - "GYM_BIKE_GETOFF" - saia da bicicleta
+ - "GYM_TREAD_GETON" - começa em esteira
+ - "GYM_TREAD_GETOFF" - sair da escada rolante
+ - "GYM_TREAD_WALK" - caminhada em esteira
+ - "GYM_TREAD_JOG" - corrida em esteira
+ - "GYM_TREAD_SPRINT" - sprint em esteira
+ - "GYM_WALK_FALLOFF" - saia a pé da escada rolante
+ - "GYM_JOG_FALLOFF" - cair em esteira de corrida
+ - "GYM_TREAD_FALLOFF" - cair da escada rolante sprint
+
+"Supino"
+ - "GYM_BP_GETON" - entrar no supino
+ - "GYM_BP_UP_A" - peso até 1 - mover as pernas
+ - "GYM_BP_UP_B" - peso acima de 2
+ - "GYM_BP_UP_SMOOTH" - pesos até bom
+ - "GYM_BP_DOWN" - pesos para baixo
+ - "GYM_BP_GETOFF" - saia supino
+ - "GYM_BP_CELEBRATE" - depois de celebrar o músculo sobe
+
+"FREEWEIGHTS"
+ - "GYM_FREE_PICKUP" - pegar pesos livres
+ - "GYM_FREE_A" - pesos livres até 1
+ - "GYM_FREE_B" - pesos livres até 2 - luta
+ - "GYM_FREE_UP_SMOOTH" - pesos livres até bom
+ - "GYM_FREE_DOWN" - pesos livres para baixo
+ - "GYM_FREE_PUTDOWN" - colocou pesos livres
+ - "GYM_FREE_CELEBRATE" - depois de celebrar o músculo sobe
+
+"PLAYIDLES"
+- "ALONGAR" - trecho jogador inativo; gira frente e para trás
+
+"Lowrider"
+ - "LRGIRL_IDLELOOP" - no carro, a mão de torneiras
+ - "LRGIRL_HURRY" - no carro, leitor de ondas
+ - "LRGIRL_HAIR" - no carro, fixa o cabelo
+ - "LRGIRL_IDLE_TO_L0" - no carro, a transição do repouso para L0
+ - "LRGIRL_L0_LOOP" - no carro, o braço sobre o assento, batendo a mão
+ - "LRGIRL_L0_TO_L1" - no carro, a transição de L0 para L1
+ - "LRGIRL_L1_LOOP" - no carro, sentado no banco de trás, balançar a cabeça
+ - "LRGIRL_L1_TO_L2" - no carro, a transição entre L1 e L2
+ - "LRGIRL_L2_LOOP" - no carro, sentado no banco de trás, o braço de bombeamento
+ - "LRGIRL_L2_TO_L3" - no carro, a transição de L2 e L3
+ - "LRGIRL_L3_LOOP" - no carro, em pé, dançando
+ - "LRGIRL_L3_TO_L4" - no carro, a transição de L3 para L4
+ - "LRGIRL_L4_LOOP" - no carro, de pé, acenando com o braço
+ - "LRGIRL_L4_TO_L5" - no carro, a transição de L4 a L5
+ - "LRGIRL_L5_LOOP" - no carro, em pé, balançar para trás e para frente
+ - "LRGIRL_L345_TO_L1" - stand transição para L1
+ - "LRGIRL_L12_TO_L0" - sentado no banco de trás de transição para L0
+ - "LRGIRL_L0_BNCE" - L0 como acima, com retorno
+ - "LRGIRL_L1_BNCE" - como L1 acima, com retorno
+ - "LRGIRL_L2_BNCE" - L2 como acima, com retorno
+ - "LRGIRL_L3_BNCE" - L3 como acima, com retorno
+ - "LRGIRL_L4_BNCE" - como L4 acima, com retorno
+ - "LRGIRL_L5_BNCE" - L5 como acima, com retorno
+ - "LRGIRL_BDBNCE" - sentado no banco de trás, vamos lá anim
+ - "M_SMKLEAN_LOOP" - ciclo de fumar masculina magra
+ - "F_SMKLEAN_LOOP" - loop fumar feminino magra
+ - "M_SMKSTND_LOOP" - loop tabagismo masculino carrinho
+ - "RAP_A_LOOP" - salto ligeiro, braços oscilantes
+ - "RAP_B_LOOP" - salto ligeiro, os braços do balanço mais
+ - "RAP_C_LOOP" - ligeiro salto, postura diferente, o movimento com os braços
+ - "PRTIAL_GNGTLKD" - grupo de bate-papo 4
+ - "PRTIAL_GNGTLKE" - grupo de bate-papo 5
+ - "PRTIAL_GNGTLKF" - grupo de bate-papo 6
+ - "PRTIAL_GNGTLKG" - grupo de bate-papo 7
+ - "SIT_RELAXED" no carro, sentando-se normal
+
+"COP_AMBIENT"
+ - "COPBROWSE_IN" - curvar-se, armário de arquivo aberto
+ - "COPBROWSE_LOOP" - olhar através de arquivos
+ - "COPBROWSE_NOD" - encontrou um arquivo que ele quer
+ - "COPBROWSE_SHAKE" - não o arquivo que ele quer
+ - "COPBROWSE_OUT" - cabniet depósito perto, stand up
+ - "COPLOOK_IN" - os braços cruzados em
+ - "COPLOOK_LOOP" - os braços cruzados loop
+ - "COPLOOK_NOD" - os braços cruzados nod
+ - "COPLOOK_SHAKE" - os braços cruzados guidonagem
+ - "COPLOOK_THINK" - os braços cruzados, mão no queixo
+ - "COPLOOK_WATCH" - os braços cruzados, olhar para ver
+ - "COPLOOK_OUT" - os braços cruzados fora
+
+"INT_OFFICE"
+ - "OFF_SIT_IN" - sentar-se à máquina de escrever
+ - "OFF_SIT_TYPE_LOOP" - digitação
+ - "OFF_SIT_BORED_LOOP" - digitando entediado
+ - "OFF_SIT_IDLE_LOOP" - digitando posição idle
+ - "OFF_SIT_2IDLE_180" - levantar-se da máquina de escrever
+
+"BAR"
+ - "DNK_STNDM_LOOP" - loop beber masculino
+ - "DNK_STNDF_LOOP" - loop beber feminino
+ - "BARCUSTOM_ORDER" - a ordem do cliente
+ - "BARCUSTOM_LOOP" - espera do cliente para o fim
+ - "BARCUSTOM_GET" - o cliente obter ordem
+ - "BARSERVE_IN" - barman ter fim no
+ - "BARSERVE_LOOP" - barman ter loop fim
+ - "BARSERVE_BOTTLE" - bartender obter garrafa
+ - "BARSERVE_ORDER" - barman ter fim
+ - "BARSERVE_GLASS" - bartender tomar vidro
+ - "BARSERVE_GIVE" - garçom servir bebidas
+
+"Casino"
+ - "MANWINB" - ganha, a bomba de punho - o ator se vira para este
+ - "MANWIND" vencer, levantar o braço - o ator se vira para este
+ - "SLOT_IN" - caça-níqueis em
+ - "SLOT_PLYR" - caça-níqueis puxe a alavanca
+ - "SLOT_BET_01" - uma máquina caça-níqueis aposta
+ - "SLOT_BET_02" - caça-níqueis aposta 2
+ - "SLOT_WAIT" - slot esperar loop
+ - "SLOT_WIN_OUT" - ganhar, curvar-se, recolher os seus ganhos
+ - "SLOT_LOSE_OUT" - perder, slot machine pontapé
+ - "DEALONE" - trata de um cartão
+ - "CARDS_IN" - cartões de anim
+ - "CARDS_OUT" - cartas fora anim
+ - "CARDS_PICK_01" - obter um cartão de 1
+ - "CARDS_PICK_02" - obter um cartão de 2
+ - "CARDS_LOOP" - placas de circuito
+ - "CARDS_WIN" - cartões de ganhar anim
+ - "CARDS_LOSE" - cartões de perder anim
+ - "CARDS_RAISE" - diz o comerciante, para levantar
+ - "ROULETTE_IN" - roleta em anim
+ - "ROULETTE_BET" - aposta de roleta
+ - "ROULETTE_LOOP" - loop de espera roleta
+ - "ROULETTE_WIN" - roleta ganhar, coletar dinheiro
+ - "ROULETTE_LOSE" - roleta perder, chorar
+ - "ROULETTE_OUT" - a roleta anim
+ - "WOF" - rotação da roda
+
+"INT_SHOP"
+ - "SHOP_PAY" - sai o dinheiro e paga
+ - "SHOP_CASHIER" - cashier fica money
+ - "SHOP_IN" - loja de anim
+ - "SHOP_LOOP" - loop shooper
+ - "SHOP_LOOKA" - visitar um cliente
+ - "SHOP_LOOKB" - visitar um cliente
+ - "SHOP_OUT" - loja fora anim
+
+"STRIP"
+ - "STRIP_A" - dança Gen 1
+ - Dança gen 2 - "STRIP_E"
+ - "PUN_LOOP" - ciclo de dança patrono
+ - "PUN_HOLLER" - holla patrono
+ - "PUN_CASH" - patrono joga dinheiro
+ - "STR_LOOP_A" - dança gen 3
+ - "STR_A2B" - A transição B
+ - "STR_LOOP_B" - dança gen 4
+ - "STR_B2C" - passagem de B para C
+ - "STR_LOOP_C" - dança Gen 5
+ - "STR_C2B" - C para B transição
+ - "STR_C1" - dança para se ajoelhar
+ - "STR_C2" - ajoelhar-se para a rolagem
+ - "STR_C3" - de rolagem para rastrear
+ - "STR_B2A" - B para uma transição
+ - "PLY_CASH" - jogador joga dinheiro
+
+"ALIMENTAR"
+ - "EAT_PIZZA" - come pizza
+ - "EAT_BURGER" - come um hambúrguer
+ - "EAT_CHICKEN" - come frango - sim, todos eles fazem parecer diferente
+ - "EAT_VOMIT_P" - O ator levanta
+ - "EAT_VOMIT_SK" - O ator reage com o ator vomitando
+ - "FF_SIT_IN" - o ator se senta
+ - "FF_SIT_IN_L" - o ator se senta à esquerda
+ - "FF_SIT_IN_R" - o ator se senta à esquerda
+ - "FF_SIT_LOOK" - o ator se senta e olha
+ - "FF_SIT_EAT1" - O ator sentar e comer um
+ - "FF_SIT_EAT2" - O ator sentar e comer 2
+ - "FF_DIE_FWD" - morrer na mesa
+ - "FF_DAM_FWD" - começar a batida na mesa
+ - "FF_SIT_OUT_180" - O ator deixa a mesa em 180 graus
+ - "FF_SIT_OUT_L_180" - O ator deixa a mesa à esquerda a 180 graus
+ - "FF_SIT_OUT_R_180" - O ator deixa a mesa, à direita a 180 graus
+ - "SHP_TRAY_IN" - bandeja em anim
+ - "SHP_TRAY_POSE" - bandeja pose
+ - "SHP_TRAY_LIFT_IN" - levantar a bandeja em anim
+ - "SHP_TRAY_LIFT" - levantar a bandeja
+ - "SHP_TRAY_LIFT_LOOP" - loop bandeja (como bandeja pose)
+ - "SHP_TRAY_RETURN" - voltando a bandeja
+ - "SHP_THANK" - graças ao cliente
+
+"POOL"
+ - "POOL_IDLE_STANCE" - segurando um taco de sinuca
+ - "POOL_CHALKCUE" - giz no taco, olha funky, o ator tem a sinalização errada
+ - "POOL_SHORT_START" - comece um tiro curto
+ - Tiro curto - "POOL_SHORT_SHOT"
+ - "POOL_MED_START" - inicia um plano médio
+ - Plano médio - "POOL_MED_SHOT"
+ - "POOL_LONG_START" - comece um tiro no escuro
+ - Tiro longo - "POOL_LONG_SHOT"
+ - "POOL_XLONG_START" - iniciar uma tacada extra longo
+ - "POOL_XLONG_SHOT" - tiro extra longa
+
+"SHOP"
+ - "SMOKE_RYD" - Ryder anim fumar
+ - "ROB_SHIFTY" - ladrão sorrateiro à procura
+ - "ROB_STICKUP_IN" - assalto à mão armada em anim
+ - "ROB_LOOP_THREAT" - pau até anim principal
+ - "SHP_ROB_HANDSUP" - mãos ator até
+ - "ROB_LOOP" - ater-se loop
+ - "ROB_2IDLE" - pau até a posição idle
+ - "SHP_GUN_GRAB" - ameaça de pegar uma espingarda
+
+"Graffiti"
+ - "GRAFFITI_CHKOUT" - olha graffiti e aprova
+
+"Dealer"
+ - "DEALER_IDLE" - comerciante, ocioso; mãos cruzadas no pulso
+ - "SHOP_PAY" - paga ao comerciante
+ - "DEALER_DEAL" - negociante dá as mercadorias
+
+"Crack"
+ - "BBALBAT_IDLE_01" - morcego por cima do ombro, em seguida, bate-lo na mão
+ - "BBALBAT_IDLE_02" - morcego por cima do ombro
+ - "CRCKIDLE1" - rachou fora, sentado
+ - "CRCKIDLE2" - rachou fora, deitado
+ - "CRCKIDLE3" - rachado, de joelhos contra a superfície
+ - "CRCKIDLE4" - rachou fora, deitado nas costas
+ - "CRCKDETH1" - sentar-se, cair, morrer
+ - "CRCKDETH2" - enrolado, morrem
+ - "CRCKDETH3" - sentar-se, voltam, morrem
+ - "CRCKDETH4" - sentado enrolado, rolar die (curto)
+
+"Baseball"
+ - "BAT_4" - batia com um bastão, overhand swing
+
+"COLT45"
+ - "COLT45_FIRE" - uma arma de fogo a partir do quadril
+ - "COLT45_RELOAD" - relaod o jumentinho
+
+"FAT"
+ - "IDLE_TIRED" - como o outro ocioso cansado de "PED", excepto se inclinou mais
+
+"GHANDS"
+ - "GSIGN1" - sinais da mão, do nível da cabeça, em seguida, cair
+ - "GSIGN3" - sinais da mão, nível do tórax, em seguida, cair
+
+"GHETTO_DB"
+ - "GDB_CAR_PLY" - "Drive By" anim mini-cena, Carl gira em torno de
+ - "GDB_CAR_SMO" - "Drive By" anim mini-cena, fumaça de arma de cargas
+ - "GDB_CAR_SWE" - "Drive By" anim mini-cena, fala doce e gestos
+ - "GDB_CAR_RYD" - "Drive By" anim cutscene mini-palestras, Ryder
+ - "GDB_CAR2_PLY" - "Drive By" anim mini-cena, Carl gira em torno de 2
+ - "GDB_CAR2_SMO" - "Drive By" anim mini-cena, fala Fumaça
+ - "GDB_CAR2_SWE" - "Drive By" anim mini-cena, fala Sweet 2
+
+"Doce"
+ - "SWEET_ASS_SLAP" - bofetada que burro!
+ - "HO_ASS_SLAPPED" - comece a bunda tapa!
+ - "SWEET_HNDSHLDR_01" - Sweet, com um braço em torno do ombro de Carl
+ - "PLYR_HNDSHLDR_01" - reação de Carl acima
+ - "LAFIN_SWEET" - de "Green Sabre", Sweet feridos
+ - "LAFIN_PLAYER" - de "Green Sabre", Carl sobe para Sweet
+ - "SWEET_INJUREDLOOP" - de "Green Sabre", doce debruçado sobre loop
+
+"CAR"
+ - "SIT_RELAXED" - no carro, sentando-se
+ - "TAP_HAND" - no carro, batendo a mão
+ - "FIXN_CAR_LOOP" - sob o carro, que fixa
+ - "FIXN_CAR_OUT" - sob o carro, rola para fora
+ - "TYD2CAR_LOW" - de "Fender Ketchup", velocidade lenta
+ - "TYD2CAR_MED" - de "Fender Ketchup". velocidade média
+ - "TYD2CAR_HIGH" - de "Fender Ketchup", de alta velocidade
+ - "TYD2CAR_TURNR" - de "Fender Ketchup", vire à direita
+ - "TYD2CAR_TURNL" - de "Fender Ketchup", vire à esquerda
+ - "TYD2CAR_BUMP" - de "Fender Ketchup", colisão
+
+"Cemitério"
+ - "MRNM_LOOP" - masculino luto loop
+ - "MRNF_LOOP" - feminino luto loop, com choro
+ - "PRST_LOOPA" - Padre loop rezar
+
+"BD_FIRE"
+ - "GRLFRD_KISS_03" - Cabeça de zero, então beijo
+ - "PLAYA_KISS_03" - jogador beijo 3
+ - "BD_GF_WAVE" - onda menina, se vira para este
+ - "WASH_UP" - lavar as mãos curto anim
+ - "M_SMKLEAN_LOOP" - tabagismo masculino loop magra
+ - "BD_PANIC_LOOP" - ciclo de pânico gir65l na janela
+ - "BD_PANIC_01" - var pânico 1
+ - "BD_PANIC_02" - var pânico 2
+ - "BD_PANIC_03" - var pânico 3
+ - "BD_PANIC_04" - var pânico 4
+
+"SWAT"
+ - "SWT_WLLPK_L"
+ - "SWT_WLLSHOOT_IN_L"
+ - "SWT_WLLSHOOT_OUT_L"
+ - "SWT_WLLPK_L_BACK"
+ - "SWT_WLLPK_R"
+ - "SWT_WLLSHOOT_IN_R"
+ - "SWT_WLLSHOOT_OUT_R"
+ - "SWT_WLLPK_R_BACK"
+ - "GNSTWALL_INJURD"
+ - "RAIL_FALL" (usado com 088A)
+ - "RAIL_FALL_CRAWL"
+ - "SWT_BREACH_01"
+ - "SWT_BREACH_02"
+ - "SWT_BREACH_03"
+ - "SWT_VENT_01"
+ - "SWT_VENT_02"
+ - "SWT_VNT_SHT_IN"
+ - "SWT_VNT_SHT_LOOP"
+ - "SWT_VNT_SHT_DIE"
+ - "JMP_WALL1M_180"
+
+"DODGE"
+ - "CRUSH_JUMP"
+ - "Esmagado"
+
+"CAR_CHAT"
+ - "CAR_SC1_FR"
+ - "CAR_SC1_BR"
+ - "CAR_SC1_FL"
+ - "CAR_SC1_BL"
+ - "CAR_SC2_FL"
+ - "CAR_SC3_FL"
+ - "CAR_SC3_FR"
+ - "CAR_SC3_BR"
+ - "CAR_SC4_FL"
+ - "CAR_SC4_FR"
+ - "CAR_SC4_BR"
+ - "CAR_SC4_BL"
+ - "CAR_TALKM_IN"
+ - "CAR_TALKM_LOOP"
+ - "CAR_TALKM_OUT"
+ - "CARFONE_IN"
+ - "CARFONE_LOOPA"
+ - "CARFONE_LOOPA_TO_B"
+ - "CARFONE_LOOPB"
+ - "CARFONE_LOOPB_TO_A"
+ - "CARFONE_OUT"
+
+"ON_LOOKERS"
+ - "SHOUT_IN"
+ - "SHOUT_LOOP"
+ - "SHOUT_OUT"
+ - "POINTUP_IN"
+ - "POINTUP_LOOP"
+ - "POINTUP_OUT"
+ - "POINT_LOOP"
+ - "LKUP_POINT"
+ - "LKUP_LOOP"
+ - "SHOUT_01"
+ - "SHOUT_02"
+ - "SHOUT_LOOP"
+ - "LKAROUND_IN"
+ - "LKAROUND_LOOP"
+ - "LKAROUND_OUT"
+ - "WAVE_LOOP"
+
+"INT_HOUSE"
+ - "BED_LOOP_R"
+ - "WASH_UP"
+
+"Caixa"
+ - "CATCH_BOX"
+
+"RYDER"
+ - "RYD_BECKON_01"
+ - "RYD_BECKON_02"
+ - "RYD_BECKON_03"
+ - "VAN_STAND"
+ - "VAN_FALL_L"
+ - "VAN_FALL_R"
+ - "VAN_LEAN_L"
+ - "VAN_LEAN_R"
+ - "VAN_PICKUP_S"
+ - "VAN_PICKUP_E"
+ - "VAN_CRATE_L"
+ - "VAN_CRATE_R"
+ - "VAN_STAND_CRATE"
+ - "VAN_THROW"
+ - "RYD_DIE_PT1"
+ - "RYD_DIE_PT2"
+
+"Carregar" - nenhuma - provavelmente usada com "Home Invasion" e outros
+
+"Presépio"
+ - "CRIB_USE_SWITCH"
+ - "PED_CONSOLE_LOOP"
+ - "PED_CONSOLE_LOOSE"
+ - "CRIB_CONSOLE_LOOP"
+
+"Rap"
+ - "LAUGH_01"
+
+"TREM"
+ - "TRAN_STMB"
+ - "TRAN_HNG"
+ - "TRAN_GTUP"
+ - "TRAN_OUCH"
+
+"JST_BUISNESS"
+ - "PLAYER_01"
+ - "SMOKE_01"
+ - "GIRL_01"
+ - "GIRL_02"
+
+"Praia"
+ - "LAY_BAC_LOOP"
+ - "PARKSIT_M_LOOP"
+ - "PARKSIT_W_LOOP"
+ - "Banhista"
+ - "SITNWAIT_LOOP_W"
+
+"Scratching"
+ - "SCLNG_R"
+
+"Vending"
+ - "VEND_EAT_P"
+ - "VEND_EAT1_P"
+ - "VEND_USE"
+ - "VEND_USE_PT2"
+ - "VEND_DRINK_P"
+ - "VEND_DRINK2_P"
+
+"RIOT"
+ - "RIOT_CHANT"
+ - "RIOT_CHALLENGE"
+ - "RIOT_SHOUT"
+ - "RIOT_FUKU"
+ - "RIOT_PUNCHES"
+
+"MD_CHASE"
+ - "MD_BIKE_JMP_F"
+ - "MD_BIKE_JMP_BL"
+ - "MD_BIKE_LND_ROLL_F"
+ - "MD_BIKE_LND_DIE_F"
+ - "MD_BIKE_LND_DIE_BL"
+ - "MD_BIKE_LND_F"
+ - "MD_BIKE_LND_BL"
+ - "MD_BIKE_PUNCH_F"
+ - "MD_BIKE_SHOT_F"
+ - "CARHIT_TUMBLE"
+ - "CARHIT_HANGON"
+ - "HANGON_STUN_LOOP"
+ - "HANGON_STUN_TURN"
+ - "MD_BIKE_2_HANG"
+ - "MD_HANG_LOOP"
+ - "MD_HANG_LND_ROLL"
+
+"MD_END"
+ - "END_SC1_SWE"
+ - "END_SC1_RYD"
+ - "END_SC1_PLY"
+ - "END_SC1_SMO"
+ - "END_SC2_SWE"
+ - "END_SC2_RYD"
+ - "END_SC2_PLY"
+ - "END_SC2_SMO"
+
+"POLÍCIA"
+ - "CRM_DRGBST_01"
+ - "PLC_DRGBST_01"
+ - "PLC_DRGBST_02"
+ - "COPTRAF_COME"
+ - "COPTRAF_LEFT"
+
+"ROB_BANK"
+ - "CAT_SAFE_ROB"
+ - "CAT_SAFE_OPEN"
+ - "SHP_HANDSUP_SCR"
+
+"OTB"
+ - "WTCHRACE_IN"
+ - "WTCHRACE_OUT"
+ - "WTCHRACE_LOOP"
+ - "WTCHRACE_CMON"
+ - "WTCHRACE_WIN"
+ - "WTCHRACE_LOSE"
+ - "BETSLP_IN"
+ - "BETSLP_OUT"
+ - "BETSLP_LOOP"
+ - "BETSLP_LKABT"
+ - "BETSLP_TNK"
+
+"Bomber"
+ - "BOM_PLANT_IN"
+ - "BOM_PLANT_LOOP"
+ - "BOM_PLANT_CROUCH_IN"
+ - "BOM_PLANT_CROUCH_OUT"
+ - "BOM_PLANT_2IDLE"
+
+"Wuzi"
+ - "WUZI_GRND_CHK"
+ - "WUZI_GREET_WUZI"
+ - "CS_PLYR_PT1"
+ - "CS_PLYR_PT2"
+ - "CS_WUZI_PT1"
+ - "CS_WUZI_PT2"
+ - "CS_DEAD_GUY"
+
+"DAM_JUMP"
+ - "SF_JUMPWALL"
+ - "DAM_LAUNCH"
+ - "DAM_DIVE_LOOP"
+ - "DAM_LAND"
+ - "JUMP_ROLL"
+
+"PARK"
+ - "TAI_CHI_IN"
+ - "TAI_CHI_LOOP"
+ - "TAI_CHI_OUT"
+
+"BIKELEAP"
+ - "BK_RDY_IN"
+ - "BK_RDY_OUT"
+ - "BK_BLNCE_IN"
+ - "BK_BLNCE_OUT"
+ - "BK_JMP"
+ - "TRUCK_GETIN"
+ - "TRUCK_DRIVER"
+ - "STRUGGLE_DRIVER"
+ - "STRUGGLE_CESAR"
+
+"AEROPORTO"
+ - "THRW_BARL_THRW" - usado em "Stowaway"
+
+"Pára-quedas"
+ - "FALL_SKYDIVE"
+ - "FALL_SKYDIVE_L"
+ - "FALL_SKYDIVE_R"
+ - "FALL_SKYDIVE_ACCEL"
+ - "FALL_SKYDIVE_DIE"
+ - "PARA_OPEN"
+ - "PARA_FLOAT"
+ - "PARA_DECEL"
+ - "PARA_STEERL"
+ - "PARA_STEERR"
+ - "PARA_LAND"
+ - "PARA_LAND_WATER"
+
+"Bronzear"
+ - "SBATHE_F_LIEB2SIT"
+ - "PARKSIT_M_IN"
+ - "PARKSIT_M_OUT"
+ - "PARKSIT_M_IDLEA"
+ - "PARKSIT_M_IDLEB"
+ - "PARKSIT_M_IDLEC"
+
+"PAULNMAC"
+ - "PISS_IN"
+ - "PISS_LOOP"
+ - "PISS_OUT"
+ - "PNM_LOOP_A"
+ - "PNM_ARGUE1_A"
+ - "PNM_ARGUE2_A"
+ - "PNM_LOOP_B"
+ - "PNM_ARGUE1_B"
+ - "PNM_ARGUE2_B"
+
+"CAMERA"
+ - "CAMSTND_IDLELOOP"
+ - "CAMSTND_LKABT"
+ - "CAMSTND_TO_CAMCRCH"
+ - "CAMCRCH_TO_CAMSTND"
+ - "PICSTND_IN"
+ - "PICSTND_TAKE"
+ - "PICSTND_OUT"
+ - "CAMCRCH_IDLELOOP"
+ - "PICCRCH_IN"
+ - "PICCRCH_TAKE"
+ - "PICCRCH_OUT"
+
+"HEIST9"
+ - "USE_SWIPECARD"
+ - "CAS_G2_GASKO"
+ - "SWT_WLLPK_L"
+ - "SWT_WLLSHOOT_IN_L"
+ - "SWT_WLLSHOOT_OUT_L"
+ - "SWT_WLLPK_L_BACK"
+ - "SWT_WLLPK_R"
+ - "SWT_WLLSHOOT_IN_R"
+ - "SWT_WLLSHOOT_OUT_R"
+ - "SWT_WLLPK_R_BACK"
+
+"BSKTBALL"
+ - "BBALL_IDLE"
+ - "BBALL_IDLE2"
+ - "BBALL_IDLELOOP"
+ - "BBALL_DEF_LOOP"
+ - "BBALL_WALK_START"
+ - "BBALL_WALK"
+ - "BBALL_RUN"
+ - "BBALL_SKIDSTOP_R"
+ - "BBALL_SKIDSTOP_L"
+ - "BBALL_WALKSTOP_R"
+ - "BBALL_WALKSTOP_L"
+ - "BBALL_JUMP_SHOT"
+ - "BBALL_JUMP_CANCEL"
+ - "BBALL_DNK_LNCH"
+ - "BBALL_DNK_GLI"
+ - "BBALL_DNK"
+ - "BBALL_DNK_LND"
+ - "BBALL_DEF_JUMP_SHOT"
+ - "BBALL_PICKUP" (usado com 0804)
+
+"Finale"
+ - "FIN_JUMP_ON"
+ - "FIN_HANG_LOOP"
+ - "FIN_COP1_CLIMBOUT2"
+ - "FIN_COP1_STOMP"
+ - "FIN_HANG_SLIP"
+ - "FIN_COP1_LOOP"
+ - "FIN_LAND_DIE"
+ - "FIN_LET_GO"
+ - "FIN_HANG_L"
+ - "FIN_HANG_R"
+ - "FIN_LEGSUP_L"
+ - "FIN_LEGSUP_R"
+ - "FIN_LEGSUP_LOOP"
+ - "FIN_LAND_CAR"
+ - "FIN_CLIMB_IN"
+
+"FINALE2"
+ - "FIN_COP1_CLIMBOUT"
+ - "FIN_SWITCH_S"
+ - "FIN_SWITCH_P"
+ - "FIN_COP1_SHOT"
+ - "FIN_COP1_SWING"
+ - "FIN_COP2_CLIMBOUT"
+
+"Roupa"
+ - "CLO_POSE_TORSO"
+ - "CLO_IN"
+ - "CLO_OUT"
+ - "CLO_POSE_IN"
+ - "CLO_POSE_LOOP"
+ - "CLO_BUY"
+ - "CLO_POSE_OUT"
+

@@ -1,0 +1,67 @@
+2489.8792 -1667.7366 13.3437 groove
+1961.6426 -2367.5391 13.5469   ls airport
+1193.9902 -2036.361 69.0078   observatorio
+1546.1522 -1352.2203 329.4728    maze bank
+357.121 -1831.3207 3.8935     pier st monica 
+ 1427.8118 -808.4108 93.875   vine sign
+   
+   
+   lv
+   2323.6294 1283.2266 97.567 topo piramide
+ 2027.5648 1008.1821 10.8203  four dragons cassino
+ 1479.9786 1288.7266 10.8203   lv airport
+184.7708 1902.5797 17.6813  SREA 51
+-80.0826 1385.6823 17.0    lil proble in
+811.8419 845.0722 10.0783    quarry hunter pedreira
+
+-335.8786 1515.5804 75.3594  satelites
+-675.5908 2044.8488 77.8984 represa
+-663.0757 2299.6445 136.0966 pulo em LV
+401.3361 2533.8032 16.5451 cemiterio de avioes
+
+
+san fierro
+-2662.3887 1594.5055 225.7578  golden gate 
+   
+   
+   -1633.8229 -152.5664 14.1484 aerporto
+-1753.8489 885.2474 295.875 predio pontudo   
+-2245.5659 741.8102 49.4393 chinatown
+-2032.6021 170.8875 28.8359 doherty
+-2417.0515 -289.9528 56.9124 clube de golf
+
+
+-2302.4771 -1648.6372 483.6389 chilliad
+-873.5254 -2282.9966 29.3907 back o beyonud
+
+
+
+
+
+
+1775 = 2533.8 -1663.96 15.1953 0.0 0.0 0.0
+2779 = 2532.74 -1664.13 14.0844 0.0 0.0 0.0
+1432 = 2532.5 -1666.98 14.1906 0.0 0.0 0.0
+1432 = 2529.6 -1666.98 14.1906 0.0 0.0 0.0
+1432 = 2526.6 -1666.98 14.1906 0.0 0.0 0.0
+2964 = 2530.56 -1669.58 14.0375  0.0 0.0 0.0
+
+
+
+
+2229 speaker preto
+2232 speaker bom
+955   CJ_SPRUNK1  sprunk 1775
+2779 fliperama
+2100 aparelho de som   MED_HI_FI_2
+
+
+CJ_COIN_OP 2681 fliperama
+
+CJ_COIN_OP_1 2778 fliperama
+
+2964 k_pooltablesm  mesa de sinuca
+
+NEIL_SLOT  2640 caca niquel
+
+DYN_TABLE_2   1432   meesa com cadeiras

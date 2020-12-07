@@ -1,0 +1,74 @@
+{$CLEO .cs}
+
+03A4: name_thread 'Teste' 
+
+:Limite
+while true
+wait 0 
+        if   0256:   player $PLAYER_CHAR defined
+ then        //
+        if   0256:   player $PLAYER_CHAR defined
+        then 
+            if  00DF:   actor $PLAYER_ACTOR driving 
+        then  //
+             03C0: $CARRO = actor $PLAYER_ACTOR car
+             jump @2
+            end
+         end
+    end
+end
+         
+:2
+ while true
+  wait 0 
+               02E3: $SPEED = vehicle $CARRO speed
+        if
+        $SPEED > 50.0 //velocidade maxima
+          then
+             010D: set_player $PLAYER_CHAR wanted_level_to 1
+             01C3: remove_references_to_car $CARRO // Like turning a car into any random car 
+             end
+       end
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+######     COMPILADO    ##########
+
+
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'TESTE' 
+
+:TESTE_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @TESTE_78 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @TESTE_78 
+00D6: if 
+00DF:   actor $PLAYER_ACTOR driving 
+004D: jump_if_false @TESTE_78 
+03C0: $CARRO = actor $PLAYER_ACTOR car 
+0002: jump @TESTE_85 
+
+:TESTE_78
+0002: jump @TESTE_11 
+
+:TESTE_85
+0001: wait 0 ms 
+02E3: $SPEED = car $CARRO speed 
+00D6: if 
+0020:   $SPEED > 50.0 
+004D: jump_if_false @TESTE_130 
+010D: set_player $PLAYER_CHAR wanted_level_to 1 
+01C3: remove_references_to_car $CARRO // Like turning a car into any random car 
+
+:TESTE_130
+0002: jump @TESTE_85 
+
+
+
+

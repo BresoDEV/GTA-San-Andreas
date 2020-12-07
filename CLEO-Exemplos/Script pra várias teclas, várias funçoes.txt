@@ -1,0 +1,198 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'WEAPON' 
+0470: 1@ = actor $PLAYER_ACTOR current_weapon 
+0001: wait 0 ms 
+00D6: if 
+0039:   1@ == 0 
+0039:   0@ == 1 
+0001: wait 10 ms 
+
+:WEAPON_45
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 96 
+004D: jump_if_false @WEAPON_75 
+0001: wait 0 ms 
+0002: jump @WEAPON_326 
+
+:WEAPON_75
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 97 
+004D: jump_if_false @WEAPON_105 
+0001: wait 0 ms 
+0002: jump @WEAPON_391 
+
+:WEAPON_105
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 98 
+004D: jump_if_false @WEAPON_135 
+0001: wait 0 ms 
+0002: jump @WEAPON_456 
+
+:WEAPON_135
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 99 
+004D: jump_if_false @WEAPON_165 
+0001: wait 0 ms 
+0002: jump @WEAPON_521 
+
+:WEAPON_165
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 100 
+004D: jump_if_false @WEAPON_195 
+0001: wait 0 ms 
+0002: jump @WEAPON_568 
+
+:WEAPON_195
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 102 
+004D: jump_if_false @WEAPON_225 
+0001: wait 0 ms 
+0002: jump @WEAPON_651 
+
+:WEAPON_225
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 103 
+004D: jump_if_false @WEAPON_255 
+0001: wait 0 ms 
+0002: jump @WEAPON_734 
+
+:WEAPON_255
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 104 
+004D: jump_if_false @WEAPON_285 
+0001: wait 0 ms 
+0002: jump @WEAPON_785 
+
+:WEAPON_285
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 105 
+004D: jump_if_false @WEAPON_45 
+0001: wait 0 ms 
+0002: jump @WEAPON_836 
+0001: wait 0 ms 
+0002: jump @WEAPON_45 
+
+:WEAPON_326
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 22 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 22 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 23 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 23 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 24 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 24 
+0002: jump @WEAPON_45 
+
+:WEAPON_391
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 28 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 28 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 29 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 29 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 32 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 32 
+0002: jump @WEAPON_45 
+
+:WEAPON_456
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 25 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 25 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 26 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 26 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 27 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 27 
+0002: jump @WEAPON_45 
+
+:WEAPON_521
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 30 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 30 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 31 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 31 
+0002: jump @WEAPON_45 
+
+:WEAPON_568
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 16 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 16 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 17 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 17 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 18 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 18 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 19 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 19 
+0002: jump @WEAPON_45 
+
+:WEAPON_651
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 35 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 35 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 36 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 36 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 37 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 37 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 38 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 38 
+0002: jump @WEAPON_45 
+
+:WEAPON_734
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 33 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 33 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 34 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 34 
+0001: wait 0 ms 
+0002: jump @WEAPON_45 
+
+:WEAPON_785
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 44 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 44 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 45 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 45 
+0001: wait 0 ms 
+0002: jump @WEAPON_45 
+
+:WEAPON_836
+0001: wait 0 ms 
+00D6: if 
+0491:   actor $PLAYER_ACTOR has_weapon 46 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 46 
+0001: wait 0 ms 
+0002: jump @WEAPON_45 

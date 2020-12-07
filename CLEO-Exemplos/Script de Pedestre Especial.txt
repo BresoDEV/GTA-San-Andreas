@@ -1,0 +1,53 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 1536.1764 -1352.609 329.4575 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_11 
+023C: load_special_actor 'TENPEN' as 6 // models 290-299
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if and
+023D:   special_actor 6 loaded 
+004D: jump_if_false @DUDU_188 
+009A: 2@ = create_actor_pedtype 4 model #SPECIAL06 at 1536.1764 -1352.609 329.4575 
+0173: set_actor 2@ Z_angle_to 218.4581 
+0223: set_actor 2@ health_to 6000 
+035F: actor 2@ armour += 2000 
+0001: wait 10000 ms 
+0296: unload_special_actor 6 
+
+:DUDU_763
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 1536.1764 -1352.609 329.4575 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+0002: jump @DUDU_763 
+
+:DUDU_848
+009B: destroy_actor 2@ 
+0002: jump @DUDU_11 

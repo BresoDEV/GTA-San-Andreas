@@ -1,0 +1,25 @@
+{$CLEO .cs} 
+:FXT 
+03A4: name_thread 'FXT' 
+
+:FXT_01 
+0001: wait 0 ms 
+if 
+0AB0:   key_pressed 84//--------- key = T 
+004D: jump_if_false @FXT_01 
+00BA: text_styled 'TXT_01'  1000 ms  1 
+0A93: end_custom_thread 
+
+
+00BA: show_text_styled GXT 'BEEFY' time 3000 style ESTILO ALI EM BAIXO
+
+* 1: No meio, assim como quando você passou uma missão ou vencer uma corrida.
+    * 2: No bottomRight, assim como quando você inicia uma missão.
+    * 3: texto em branco no meio, assim como quando você está perdido ou quebrado.
+    * 4: Estilo 1, mas menores.
+    * 5: Igual ao estilo do 4, mas um pouco maior na tela.
+    * 6: texto branca pequena no meio da tela.
+    * 7: Luz texto azul na parte superior da tela.
+
+
+00BC: show_text_highpriority GXT '03' time 4000 flag 1      (Groove st..home...antes de eu fuder com tido...)

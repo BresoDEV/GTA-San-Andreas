@@ -1,0 +1,44 @@
+{$CLEO .cs}
+:Corona_1
+03A4: name_thread 'CORA'
+
+:Corona_3
+0001: wait 0 ms
+if
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @Corona_3
+00D6: if
+0AB0:   key_pressed 8//-----------------------press Backspace
+004D: jump_if_false @Corona_3
+04C4: create_coordinate 1@ 2@ 3@ from_actor $PLAYER_ACTOR offset -5.0  7.0  2.2
+04D5: create_corona_at 1@ 2@ 3@ radius 1.5 type 1 flare 1 RGB 150  0  255
+04C4: create_coordinate 4@ 5@ 6@ from_actor $PLAYER_ACTOR offset -2.0  7.0  3.2
+04D5: create_corona_at 4@ 5@ 6@ radius 1.5 type 2 flare 1 RGB 247 206 12
+04C4: create_coordinate 7@ 8@ 9@ from_actor $PLAYER_ACTOR offset 3.0  7.0  5.2
+04D5: create_corona_at 7@ 8@ 9@ radius 1.5 type 3 flare 0 RGB 255 7 7
+04C4: create_coordinate 10@ 11@ 12@ from_actor $PLAYER_ACTOR offset 6.0  7.0  3.2
+04D5: create_corona_at 10@ 11@ 12@ radius 1.5 type 4 flare 0 RGB 3 3 255
+0002: jump @Corona_3
+
+
+
+
+04D5: create_corona_at 1@ 2@ 3@ radius 1.5 type 2 flare 1 RGB 247 206 12
+opcode 04D5: shows textures of GTASA\models\particle.txd as soft light source
+opcode 04D5: have 9 parameter
+parameter 1,2,3 = x,y,z - float, absolute coords for spawning
+parameter 4 = size, float
+parameter 5 = type, integer, change textur
+parameter 6 = shows flare, bol 0/1
+parameter 7,8,9 = color: integer values for Red-Green-Blue
+press backspace to show 4 different coronas infront of player
+
+
+RGBA 1.0 1.0 1.0 1.0 = white
+RGBA 0.0 0.0 0.0 1.0 = black
+RGBA 0.0 0.0 1.0 1.0 = blue
+RGBA 0.0 1.0 0.0 1.0 = green
+RGBA 1.0 0.0 0.0 1.0 = red
+RGBA 1.0 1.0 0.0 1.0 = yellow
+RGBA 0.0 1.0 1.0 1.0 = turquoise
+RGBA 1.0 0.0 1.0 1.0 = pink

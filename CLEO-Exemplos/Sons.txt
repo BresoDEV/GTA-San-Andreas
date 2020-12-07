@@ -1,0 +1,30 @@
+03CF: load_wav 7000 as 1 
+09D6: set_actor $PLAYER_ACTOR sound 7000 flags 1 1 0 
+09F1: play_audio_at_actor $PLAYER_ACTOR event 1 
+
+
+
+7000  voz xingando
+
+
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'BOMB_EDUARDO' 
+
+:BOMB_EDUARDO_19
+0001: wait 0 ms 
+00D6: if and 
+0AB0:   key_pressed 80 
+004D: jump_if_false @BOMB_EDUARDO_19 
+03CF: load_wav 3031 as 1 
+09D6: set_actor $PLAYER_ACTOR sound 3031 flags 1 1 0 
+09F1: play_audio_at_actor $PLAYER_ACTOR event 1 
+0001: wait 3000 ms 
+00D6: if and 
+0968: actor $PLAYER_ACTOR stop_mouth 
+018E: stop_sound 1
+jump @BOMB_EDUARDO_19

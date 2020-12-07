@@ -1,0 +1,108 @@
+
+
+{$CLEO .cs}
+:ONEDOOR_1
+03A4: name_thread 'ONEDOOR'
+
+:ONEDOOR_3
+0001: wait 0 ms
+if
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @ONEDOOR_3
+if
+0570: $630 = create_asset_radar_marker_with_icon 36 at -2127.0 -80.8 34.3281 
+00FE:   actor $PLAYER_ACTOR  0 (in-sphere)near_point -2127.0 -80.8 34.3281 radius  80.5  80.5  80.5
+004D: jump_if_false @ONEDOOR_3
+0107: 5@ = create_object 2990 at -2127.0 -80.8 34.3281
+0177: set_object 5@ Z_angle_to 180.0
+
+0007: 7@ =  -2127.0     // default X (closed)
+0007: 8@ =  -80.8  //default Y (closed)
+0007: 9@ =  34.3281  //default Z (closed)
+0007: 11@ =  -2117.0    // destination X (open)
+0007: 12@ =  -80.8  // destination Y (open)  
+0007: 13@ =  34.3281  // destination Z (open)
+0006: 14@ = 0
+0006: 15@ = 0
+0002: jump @ONEDOOR_12
+
+:ONEDOOR_12
+0001: wait 0 ms
+if
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @ONEDOOR_75
+if
+80FE:   not actor $PLAYER_ACTOR  0 (in-sphere)near_point 7@ 8@ 9@ radius  95.5  95.5  95.5
+004D: jump_if_false @ONEDOOR_13
+0002: jump @ONEDOOR_75
+
+:ONEDOOR_13
+if
+0039:   15@ ==  0  // integer values
+004D: jump_if_false @ONEDOOR_15
+if
+00FE:   actor $PLAYER_ACTOR  0 (in-sphere)near_point 7@ 8@ 9@ radius  20.5  20.5  20.5
+0AB0:   key_pressed 111//------------------key = F5
+004D: jump_if_false @ONEDOOR_15
+0006: 15@ = 1
+000A: 14@ +=  1  // integer values
+0002: jump @ONEDOOR_15
+
+:ONEDOOR_15
+if
+0039:   15@ ==  1  // integer values
+004D: jump_if_false @ONEDOOR_18
+
+:ONEDOOR_16
+if
+0039:   14@ ==  1  // integer values
+004D: jump_if_false @ONEDOOR_17
+034E: move_object 5@ to  11@ 12@ 13@ speed  0.1  0.1  0.0 flag  0
+if
+04E5:  object 5@ near_point 11@ 12@ radius 1.0 1.0 flag 0
+004D: jump_if_false @ONEDOOR_17
+0006: 14@ = 2
+0006: 15@ = 1
+0001: wait 500 ms
+0002: jump @ONEDOOR_29
+
+:ONEDOOR_17
+if
+0039:   14@ ==  3  // integer values
+004D: jump_if_false @ONEDOOR_18
+034E: move_object 5@ to  7@ 8@ 9@ speed  0.1  0.1  0.0 flag  0
+if
+04E5:  object 5@ near_point 7@ 8@ radius 0.1 0.1 flag 0
+004D: jump_if_false @ONEDOOR_18
+0006: 15@ = 0
+0006: 14@ = 0
+
+:ONEDOOR_18
+if  and
+0039:   14@ ==  2  // integer values
+80FE:   not actor $PLAYER_ACTOR  0 (in-sphere)near_point 7@ 8@ 9@ radius  19.0  19.0  15.0
+004D: jump_if_false @ONEDOOR_19
+0006: 15@ = 1
+0006: 14@ = 3
+0002: jump @ONEDOOR_12
+
+:ONEDOOR_19
+if  and
+0039:   14@ ==  2  // integer values
+80FE:   not actor $PLAYER_ACTOR  0 (in-sphere)near_point 7@ 8@ 9@ radius  3.0  3.0  5.0
+0AB0:   key_pressed 116
+004D: jump_if_false @ONEDOOR_29
+0006: 15@ = 1
+0006: 14@ = 3
+0002: jump @ONEDOOR_12
+
+:ONEDOOR_29
+0002: jump @ONEDOOR_12
+
+:ONEDOOR_75
+01C4: remove_references_to_object 5@  // This object will now disappear when the player looks away
+03F0: text_draw_toggle  0  
+0001: wait 1000 ms
+0006: 14@ = 0
+0006: 15@ = 0
+0002: jump @ONEDOOR_3

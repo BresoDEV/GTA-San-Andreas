@@ -1,0 +1,67 @@
+Esse script cria uma marca vermelha onde o Cj começa  o  jogo, ao ir nela, cria-se um carro e vc precisa ir até outra marca. Mas se vc chegar na outra marca e o carro estiver em bom estado, vai aparesce MISSÃO CONCLUIDA, mas se ele estiver destruido, vai aparescer MISSÃO FALHADA
+
+
+
+{$CLEO .CS}
+
+//-------------MAIN---------------
+03A4: name_thread 'LSBA' 
+0001: wait 1000 ms 
+
+:LSBA_16
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @LSBA_16 
+00FF:   actor $PLAYER_ACTOR sphere 1 in_sphere 2261.7251 -1260.9307 23.9766 radius 1.0 1.0 1.0 on_foot 
+004D: jump_if_false @LSBA_16 
+0001: wait 150 ms 
+0247: load_model #SANDKING
+
+:OI1
+0001: wait 150 ms 
+0248:   model #SANDKING available
+004D: jump_if_false @OI1
+04C4: store_coords_to $TEMPVAR_FLOAT_1 $TEMPVAR_FLOAT_2 $TEMPVAR_FLOAT_3 from_actor $PLAYER_ACTOR with_offset 0.0 5.0 1.0 
+00A5: $CARRO = create_car #SANDKING at $TEMPVAR_FLOAT_1 $TEMPVAR_FLOAT_2 $TEMPVAR_FLOAT_3
+0224: set_car $CARRO health_to 1000 
+0175: set_car $CARRO Z_angle_to 315.0 
+0227: $VIDA_DO_CARRO = car $CARRO health 
+0002: jump @LSBA_8
+
+:LSBA_8
+0001: wait 150 ms
+00DB:   actor $PLAYER_ACTOR in_car $CARRO
+004D: jump_if_false @LSBA_8
+0002: jump @LSBA_80 
+
+
+:LSBA_80 
+0001: wait 0 ms 
+00D6: if
+0103:   actor $PLAYER_ACTOR in_sphere 2463.6389 -1660.0076 13.3112 radius 4.0 4.0 6.0 sphere 1 stopped_in_car 
+004D: jump_if_false @LSBA_80 
+wait 0 ms
+0002: jump @LSBA_170
+
+:LSBA_170
+0001: wait 0 ms 
+00D6: if 
+0185:   car $CARRO health >= 900 
+004D: jump_if_false @LSBA_126 
+0002: jump @LSBA_200 
+
+:LSBA_126
+0001: wait 500 ms 
+01B4: set_player $PLAYER_CHAR can_move 1 
+02A3: enable_widescreen 0 
+0ACD: show_text_highpriority "MISSAO FALHADA" time 2000
+0001: wait 2000 ms 
+0002: jump @LSBA_16 
+
+:LSBA_200
+0001: wait 0 ms 
+0ACD: show_text_highpriority "MISSAO CONCLUIDA" time 2000 
+0001: wait 0 ms 
+0002: jump @LSBA_16 
+

@@ -1,0 +1,43 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+thread 'SAVE' 
+0A95: enable_thread_saving 
+4@ = 2504.007 
+5@ = -1692.426 
+6@ = 18.049 
+
+:SAVE_43
+1@ = Pickup.Create(1277, 3, 2504.007, -1692.426, 18.049)
+0570: 15@ = create_asset_radar_marker_with_icon 35 at 2504.007 -1692.426 18.049 
+018B: set_marker 15@ radar_mode 2 
+
+:SAVE_97
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+else_jump @SAVE_97 
+if 
+   Pickup.Picked_up(1@)
+else_jump @SAVE_97 
+if 
+  $ONMISSION == 0 
+else_jump @SAVE_97 
+wait 100 
+03D8: show_save_screen 
+
+:SAVE_157
+if 
+83D9:   not save_done 
+wait 0 
+else_jump @SAVE_181 
+jump @SAVE_157 
+
+:SAVE_181
+wait 100 
+Player.CanMove($PLAYER_CHAR) = True
+wait 10000 
+jump @SAVE_43 

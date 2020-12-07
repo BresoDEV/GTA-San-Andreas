@@ -1,0 +1,33 @@
+{$CLEO .cs}
+
+03A4: name_thread 'Aula_Arrays' 
+11@ = 2470.0
+12@ = 2475.0
+13@ = 2480.0
+14@ = 2485.0
+15@ = 2490.0
+0247: load_model #FAM1
+30@ = 0   //matriz
+
+:Titulo_1
+wait 0
+if and
+0248:   model #FAM1 available 
+5 > 30@ 
+jf @Titulo_2
+009A: 0@(30@,5i) = create_actor_pedtype 4 model #FAM1 at 11@(30@,5f) -1660.5 13.5 
+0173: set_actor 0@(30@,5i) Z_angle_to 180.0 
+30@ += 1
+jump @Titulo_1
+
+:Titulo_2
+wait 0
+0249: release_model #FAM1
+0A93: end_custom_thread
+
+
+
+
+
+
+

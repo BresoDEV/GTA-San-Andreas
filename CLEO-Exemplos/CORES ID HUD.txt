@@ -1,0 +1,16 @@
+  0  - Health Bar, Red Stuff
+   1  - Cash/Money, Entered Car Name Text, Green Stuff
+   2  - Blue Stuff
+   3  - San Andreas Text (White/Blue)
+   4  - Armour Bar, White Stuff
+   5  - Black
+   6  - Map Lines (Brown/Yellow)
+   7  - Pink, Purple Stuff
+   8  - Radio Text (Gray)
+   9  - Dark Red
+   10 - Dark Green
+   11 - Yellow Stuff
+   12 - Panel Text (Blue/Gray)
+   13 - Blue Radar Blips
+   14 - Yellow
+   15 - Transparent

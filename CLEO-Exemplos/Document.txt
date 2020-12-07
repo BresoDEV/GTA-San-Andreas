@@ -1,0 +1,975 @@
+______________________________________________________________________________________________________________
+SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Vehicles ID
+400	Landstalker
+401	Bravura
+402	Buffalo
+403	Linerunner
+404	Perennial
+405	Sentinel
+406	Dumper
+407	Fire Truck
+408	Trashmaster
+409	Stretch
+410	Manana
+411	Infernus
+412	Voodoo
+413	Pony
+414	Mule
+415	Cheetah
+416	Ambulance
+417	Leviathan
+418	Moonbeam
+419	Esperanto
+420	Taxi
+421	Washington
+422	Bobcat
+423	Mr. Whoopee
+424	BF Injection
+425	Hunter
+426	Premier
+427	Enforcer
+428	Securicar
+429	Banshee
+430	Predator
+431	Bus
+432	Rhino
+433	Barracks
+434	Hotknife
+435	Articulate Trailer 1
+436	Previon
+437	Coach
+438	Cabbie
+439	Stallion
+440	Rumpo
+441	RC Bandit
+442	Romero
+443	Packer
+444	Monster
+445	Admiral
+446	Squalo
+447	Sea Sparrow
+448	Pizza Boy
+449	Tram (not featured)
+450	Articulate Trailer 2
+451	Turismo
+452	Speeder
+453	Reefer
+454	Tropic
+455	Flatbed
+456	Yankee
+457	Caddy
+458	Solair
+459	Berkley's RC Van
+460	Skimmer
+461	PCJ 600
+462	Faggio
+463	Freeway
+464	RC Baron
+465	RC Raider
+466	Glendale
+467	Oceanic
+468	Sanchez
+469	Sparrow
+470	Patriot
+471	Quadbike
+472	Coast Guard
+473	Dinghy
+474	Hermes
+475	Sabre
+476	Rustler
+477	ZR-350
+478	Walton
+479	Regina
+480	Comet
+481	BMX
+482	Burrito
+483	Camper
+484	Marquis
+485	Baggage
+486	Dozer
+487	Maverick
+488	News Chopper
+489	Rancher
+490	FBI Rancher
+491	Virgo
+492	Greenwood
+493	Jetmax
+494	Hotring
+495	Sandking
+496	Blista Compact
+497	Police Maverick
+498	Boxville
+499	Benson
+500	Mesa
+501	RC Goblin
+502	Hotring A
+503	Hotring B
+504	Bloodring
+505	Rancher X
+506	Super GT
+507	Elegant
+508	Journey
+509	Bike
+510	Mountain Bike
+511	Beagle
+512	Cropduster
+513	Stuntplane
+514	Tanker
+515	Roadtrain
+516	Nebula
+517	Majestic
+518	Buccaneer
+519	Shamal
+520	Hydra
+521	FCR-900
+522	NRG-500
+523	HPV1000
+524	Cement Truck
+525	Towtruck
+526	Fortune
+527	Cadrona
+528	FBI Truck
+529	Willard
+530	Forklift
+531	Tractor
+532	Combine Harvester
+533	Feltzer
+534	Remington
+535	Slamvan
+536	Blade
+537	Freight (not featured)
+538	Streak (not featured)
+539	Vortex
+540	Vincent
+541	Bullet
+542	Clover
+543	Sadler
+544	Fire Truck Los Santos
+545	Hustler
+546	Intruder
+547	Primo
+548	Cargobob
+549	Tampa
+550	Sunrise
+551	Merit
+552	Utility Van
+553	Nevada
+554	Yosemite
+555	Windsor
+556	Monster A
+557	Monster B
+558	Uranus
+559	Jester
+560	Sultan
+561	Stratum
+562	Elegy
+563	Raindance
+564	RC Tiger
+565	Flash
+566	Tahoma
+567	Savanna
+568	Bandito
+569	Freight Flat (not featured)
+570	Streak Carriage (not featured)
+571	Kart
+572	Mower
+573	Dune
+574	Sweeper
+575	Broadway
+576	Tornado
+577	AT-400
+578	DFT-30
+579	Huntley
+580	Stafford
+581	BF-400
+582	Newsvan
+583	Tug
+584	Tanker Trailer
+585	Emperor
+586	Wayfarer
+587	Euros
+588	Hotdog
+589	Club
+590	Fright Box (not featured)
+591	Articulate Trailer 3
+592	Andromada
+593	Dodo
+594	RC Cam (not featured)
+595	Launch
+596	Police Los Santos
+597	Police San Fierro
+598	Police Las Venturas
+599	Police Countryside
+600	Picador
+601	S.W.A.T.
+602	Alpha
+603	Phoenix
+604	Glendale Shit
+605	Sadler Shit
+606	Baggage Box A
+607	Baggage Box B
+608	Tug Stair
+609	Boxville Burglary
+610	Farm Trailer
+611	Utility Trailer
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+______________________________________________________________________________________________________________
+Weather ID
+0	Extra Sunny Los Santos
+1	Sunny Los Santos
+2	Extra Sunny Smoggy Los Santos
+3	Sunny Smoggy Los Santos
+4	Cloudy Los Santos
+5	Sunny San Fierro
+6	Extra Sunny San Fierro
+7	Cloudy San Fierro
+8	Rainy San Fierro
+9	Foggy San Fierro
+10	Sunny Las Venturas
+11	Extra Sunny Las Venturas
+12	Cloudy Las Venturas
+13	Extra Sunny Countryside
+14	Sunny Countryside
+15	Cloudy Countryside
+16	Rainy Countryside
+17	Extra Sunny Desert
+18	Sunny Desert
+19	Sanstorm Desert
+20	Underwater (not featured)
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+______________________________________________________________________________________________________________
+Mission ID
+2	Intro (do not select)
+3	They Crawled from Uranus
+4	Duality
+5	Go Go Space Monkey
+6	Let's get ready to BUMBLE
+7	Poker
+8	Pool
+9	Lowrider / Dance
+10	Beefy Baron
+11	Big Smoke			s
+12	Ryder			s
+13	Tagging up Turf		s
+14	Cleaning the Hood		s
+15	Drive-thru			s
+16	Nines and AK's		s
+17	Drive-By			s
+18	Sweet's Girl		s
+19	Cesar Vialpando		s
+20	Los Sepulcros		s
+21	Doberman			s
+22	Burning Desire		s
+23	Gray Imports		s
+24	Home Invasion		s
+25	Catalyst			s
+26	Robbing Uncle Sam		s
+27	OG Loc			s
+28	Running Dog		s
+29	Wrong Side of the Tracks	s
+30	Just Business		s
+31	Life's a Beach		s
+32	Madd Dogg's Rhymes		s
+33	Management Issues		s
+34	House Party		s
+35	Race Tournament
+36	High Stakes, Low-rider
+37	Reuniting the Families		s
+38	The Green Sabre		s
+39	Badlands			s
+40	First Date
+41	Local Liquor Store
+42	Small Town Bank
+43	Tanker Commander
+44	Against All Odds
+45	King in Exile
+46	Body Harvest		s
+47	Are you going to San Fierro?	s
+48	Wu Zi Mu / Farewell, my love...
+49	Wear Flowers in your Hair	s
+50	Deconstruction		s
+51	555 WE TIP		s
+52	Snail Trail			s
+53	Mountain Cloud Boys		s
+54	Ran Fa Li			s
+55	Lure			s
+56	Amphibious Assault		s
+57	The Da Nang Thang		s
+58	Photo Opportunity		s
+59	Jizzy			s
+60	Outrider			s
+61	Ice Cold Killa		s
+62	Toreno's Last Flight		s
+63	Yay Ka-Boom-Boom		s
+64	Pier 69			s
+65	T-Bone Mendez		s
+66	Mike Toreno		s
+67	Zeroing In			s
+68	Test Drive			s
+69	Customs Fast Track		s
+70	Puncture Wounds		s
+71	Back to School		s
+72	Air Raid			s
+73	Supply Lines...		s
+74	New Model Army		s
+75	Monster			s
+76	Highjack			s
+77	Interdiction			s
+78	Verdant Meadows
+79	N.O.E.			s
+80	Stowaway
+81	Black Project
+82	Green Goo			s
+83	Learning to Fly		s
+84	Fender Ketchup		s
+85	Explosive Situation		s
+86	You've had your Chips		s
+87	Fish in a Barrel
+88	Don Peyote		s
+89	Intensive Care		s
+90	The Meat Business
+91	Freefall			s
+92	Saint Mark's Bistro		s
+93	Misappropriation		s
+94	High Noon			s
+95	Madd Dogg
+96	Architectural Espionage
+97	Key to her Heart		s
+98	Dam and Blast
+99	Cop Wheels		s
+100	Up, Up and Away!		s
+101	Breaking the Bank at Caligula's
+102	A Home In The Hills
+103	Vertical Bird
+104	Home Coming		s
+105	Cut Throat Business		s
+106	Beat Down on B Dup
+107	Grove 4 Life
+108	Riot
+109	Los Desperados
+110	End Of The Line (1)
+111	End Of The Line (2) (press ACTION + CROUCH, then press YES, and press ACTION if screen stay faded)
+112	End Of The Line (3)
+113	Shooting range (doesn't work)
+114	Los Santon Gym Fight School (doesn't work)
+115	San Fierro Gym Fight School (doesn't work)
+116	Las Venturas Gym Fight School (doesn't work)
+117	Trucking
+118	Quarry
+119	Boat School		s
+120	Bike School		s
+121	Taxi Driver
+122	Paramedic
+123	Firefighter
+124	Vigilante
+125	Burglary
+126	Freight Train (has to be in train)
+127	Pimping
+128	Blood Ring
+129	Kickstart
+130	Beat the Cock!
+131	Courier
+132	The Chiliad Challenge
+133	BMX (if on BMX) / NRG-500 (if on NRG-500)
+145	2-Player Rampage (XBox only)
+146	2-Player Moto-Mayhem (XBox only)
+147	2-Player Road Rage (XBox only)
+148	2-Player Heli Hunt-Down (XBox only)
+149	2-Player Dual Drive-by (XBox only)
+150	2-Player Run-around Los Santos (XBox only)
+151	2-Player Run-around Las Ventruas (XBox only)
+152	2-Player Run-around San Fierro (XBox only)
+153	2-Player Run-around Desert (XBox only)
+154	2-Player Run-around Countryside (XBox only)
+155	2-Player Free Roam Millie (XBox only)
+156	2-Player Free Roam Katie (XBox only)
+157	2-Player Free Roam Barbara (XBox only)
+158	2-Player Free Roam Helena (XBox only)
+159	2-Player Free Roam Denise (XBox only)
+160	2-Player Free Roam Michelle (XBox only)
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+______________________________________________________________________________________________________________
+Peds ID
+9	Black, female, old, rich
+10	Black, female, old, street
+11	Black, female, young, croupier
+12	Black, female, young, rich
+13	Black, female, young, street
+14	Black, male, old, rich
+15	Black, male, old, street
+16	Black, male, young, airport worker
+17	Black, male, young, business
+18	Black, male, young, beach
+19	Black, male, young
+20	Black, male, young, rich
+21	Black, male, young, criminal
+22	Black, male, young, street
+23	White, male, young, BMX rider
+24	Black, young, guard
+25	Black, young, guard
+26	White, male, young, backpacker
+27	White, male, young, construction
+28	Black, male, young, drug dealer
+29	White, male, young, drug dealer
+30	Hispanic, male, young, drug dealer
+31	Desert, white, female, old
+32	Desert, white, male, old
+33	Desert, white, male, old
+34	Desert, white, male, young
+35	Hispanic, male, old
+36	White, male, young, golfer
+37	White, male, young, golfer
+38	Hispanic, female, old, rich
+39	Hispanic, female, old, street
+40	Hispanic, female, young, rich
+41	Hispanic, female, young	, street
+43	Hispanic, male, old, rich
+44	Hispanic, male, old, street
+45	Hispanic, male, young, beach
+46	Hispanic, male, young, rich
+47	Hispanic, male, young, criminal
+48	Hispanic, male, young, street
+49	Japanese, male, old, Kung fu master
+50	White, male, young, mechanic
+51	Black, male, young, hiker
+52	White, male, young, hiker
+53	Japanese, female, old, rich
+54	Japanese, female, old, street
+55	Japanese, female, young, rich
+56	Japanese, female, young, street
+57	Japanese, male, old, rich
+58	Japanese, male, old, street
+59	Japanese, male, young, rich
+60	Japanese, male, young, street
+61	White, male, young, pilot
+62	Colonel Fuhrberger
+63	Black, female, young, prostitute
+64	Hispanic, female, young, prostitute
+66	Black, male, young, pool player
+67	Black, male, young, pool player
+68	White, male old, priest
+69	Black, female, young, street
+70	White, male, old, scientist
+71	White, male, young, security guard
+72	San Fierro, White, male, young, hippie
+73	San Fierro, White, male, young, hippie
+75	San Fierro, white, female, old, prositute
+76	White, female, young, stewardess
+77
+78
+79
+80	Las Venturas, black, male, young, boxer
+81	Las Venturas, white, male, young, boxer
+82	Las Venturas, hispanic, male, young, Elvis impersonator
+83	Las Venturas, black, male, young, Elvis impersonator
+84	Las Venturas, male, young, Elvis impersonator
+85	Las Venturas, white, female, young, prostitute
+87	Las Venturas, white, female, young, street
+88	White, female, old, rich
+89	White, female, old, street
+90	White, female, young, jogger
+91	White, female, young, rich
+92	White, female, young, roller blader
+93	White, female, young, street
+94	White, male, old, rich
+95	White, male, old, street
+96	White, male, young, jogger
+97	White, male, young, jogger
+98	White, male, young, rich
+99	White, male, young, roller blader
+100	White, male, young, criminal
+101	White, male, young, street
+102	Ballas
+103	Ballas
+104	Ballas
+105	Grove Street
+106	Grove Street
+107	Grove Street
+108	Vagos
+109	Vagos
+110	Vagos
+111	Mafia
+112	Mafia
+113	Mafia Boss
+114	Aztecas
+115	Aztecas
+116	Aztecas
+117	Triads
+118	Triads
+119	Triads
+120	Triad Boss
+121	Da Nang Boys
+122	Da Nang Boys
+123	Da Nang Boys
+124	Mafia
+125	Mafia
+126	Mafia
+127	Mafia
+128	Desert, Native American, male, young
+129	Desert, Native American, female, old
+130	Desert, Native American, female, old
+131	Desert, Native American, female, young
+132	Desert, Native American, male, old
+133	Desert, Native American, male, old
+134	San Fierro, black, male, old, tramp
+135	San Fierro, white, male, old, tramp
+136	San Fierro, black, male, young, tramp
+137	San Fierro, white, male, old, tramp
+138	White, female, young, beach
+139	Black, female, young, beach
+140	Hispanic, female, young, beach
+141	San Fierro, Japanese, female, young, business
+142	San Fierro, black, male, young, street
+143	San Fierro, black, male, young, criminal
+144	Black, male, young, crack factory worker
+145	White, female, young, crack factory worker
+146	Hispanic, male, young, crack factory worker
+147
+148
+149
+150
+151
+152	White, female, young, prostitute
+153	White, male, young, construction boss
+154	White, male, young, beach
+155	Well Stacked Pizza worker
+156	Old Reece
+157	Country, white, female, young, hillbilly
+158	Country, white, male, old, farmer
+159	Country, white, male, old, hillbilly
+160	Country, white, male, old, hillbilly
+161
+162
+163
+164
+165
+166
+167	Cluckin Bell worker
+168
+169
+170
+171
+172
+173	Rifa
+174	Rifa
+175	Rifa
+176
+177
+178	Sex Shop worker
+179	Ammunation worker
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190	Barbara
+191	Helena
+192	Michelle
+193	Katie
+194	Millie
+195	Denise
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205	Burger Shot worker
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+
+264	Mr. Whoopee clown
+274	Los Santos paramedic
+275	San Fierro paramedic
+276	Las Venturas paramedic
+277	Los Santos firefighter
+278	San Fierro firefighter
+279	Las Venturas firefighter
+280	Los Santos cop
+281	San Fierro cop
+282	Las Venturas cop
+283	Countryside sheriff
+284	LSPD Motorcycle Cop
+285	SWAT
+286	FBI
+287	Army
+288	Desert Sheriff
+289	Andre
+290	Big Bear
+291	thin Big Bear
+292	Catalina
+293	Countryside Deputy
+294	Cesar
+295	Claude
+296	Barbara
+297	Millie
+298	Dwayne
+299	Emmet
+300	Forelli
+301	Denise
+302	Helena
+303	Hernandez
+304	Janitor
+305	Jethro
+306	Jizzy
+307	Kendl (outside cutscene)
+308	LVPD Motorcycle Cop
+309	Katie
+310	Maccer
+311	Maddogg
+312	Michelle
+313	OG Loc
+314	Kent Paul
+315	Eddie Pulaski
+316	Ken Rosenburg
+317	Ryder
+318	Ryder
+319	SFPD Motorcycle Cop
+320	Johnny Sindacco
+321	Big Smoke
+322	armored Big Smoke
+323	Suzie
+324	Sweet
+325	T-Bone Mendez
+326	Frank Tenpenny
+327	Mike Toreno
+328	Truth
+329	Wu Zi Mu
+330	Zero
+331	Grove Street
+332	Grove Street
+333	Carl Johnson
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+______________________________________________________________________________________________________________
+Statistics ID
+0	Progress made
+1	Total progress
+2	Furthest Hoop
+3	Distance travelled on foot
+4	Distance travelled by car
+5	Distance travelled by motorbike
+6	Distance travelled by boat
+7	Distance travelled by golf cart
+8	Distance travelled by helicopter
+9	Distance travelled by plane
+10	Longest Wheelie distance
+11	Longest Stoppie distance
+12	Longest 2 wheels distance
+13	Weapon Budget
+14	Fashion Budget
+15	Property Budget
+16	Auto Repair and Painting Budget
+17	Longest Wheelie time
+18	Longest Stoppie time
+19	Longest 2 wheels time
+20	Food Budget
+21	Fat
+22	Stamina
+23	Muscle
+24	Max Health
+25	Sex appeal
+26	Distance travelled by swimming
+27	Distance travelled by bicycle
+28	Distance travelled on treadmill
+29	Distance travelled on exercise bike
+30	Tattoo budget
+31	Hairdressing budget
+32	Girlfriend budget
+33	Prostitute budget
+34	Furniture budget
+35	Money spent gambling
+36	Money made from pimping
+37	Money won gambling
+38	Biggest gambling win
+39	Biggest gambling loss
+40	Largest burglary swag
+41	Money made from burglary
+42	Money spent building property
+43	Unused
+44	Longest treadmill time
+45	Longest exercise bike time
+46	Heaviest weight on bench press
+47	Heaviest weight on dumbbells
+48	Best time in 8-Track
+49	BMX best time
+50	Lightest weight
+51	Longest chase time with 5 or more stars
+52	Last chase time with 5 or more stars
+53	Wage bill
+54	Strip club budget
+55	Car modification budget
+56	Time spent shopping
+57	Time spent gambling
+58	Time spent on longest mission
+59	Time spent on quickest mission
+60	Average mission time
+61	Drugs budget
+62	Total shopping budget
+63	Time spent underwater
+64	Total respect
+65	Girlfriend respect
+66	Clothes respect
+67	Fitness respect
+68	Respect
+69	Pistol Skill
+70	Silenced Pistol Skill
+71	Desert Eagle Skill
+72	Shotgun Skill
+73	Sawn-Off Shotgun Skill
+74	Combat Shotgun Skill
+75	Machine Pistol Skill
+76	SMG Skill
+77	AK-47 Skill
+78	M4 Skill
+79	Rifle Skill
+80	Appearance
+81	Gambling
+82-119	Unused
+120	People wasted by others
+121	People you've wasted
+122	Road Vehicles destroyed
+123	Boats destroyed
+124	Planes & Helicopters destroyed
+125	Cost of property damaged
+126	Bullets fired
+127	Kgs of explosives used
+128	Bullets that hit
+129	Tires popped with gunfire
+130	Number of headshots
+131	Total number of wanted stars attained
+132	Total number of wanted stars evaded
+133	Times busted
+134	Days passed in game
+135	Number of hospital visits
+136	Safehouse visits
+137	Times cheated
+138	Vehicle Resprays
+139	Maximum INSANE Jump distance
+140	Maximum INSANE Jump height
+141	Maximum INSANE Jump flips
+142	Maximum INSANE Jump rotation
+143	Best INSANE stunt awarded
+144	Unique Jumps found
+145	Unique Jumps done
+146	Mission attempts
+147	Missions passed
+148	Total number of missions in game
+149	Cash made in a Taxi
+150	Passengers dropped off
+151	People saved in an Ambulance
+152	Criminal Rating
+153	Criminals Killed on Vigilante
+154	Packages Delivered
+155	Assassinations
+156	Last dance score
+157	Highest Vigilante Mission level
+158	Highest Paramedic Mission level
+159	Highest Firefighter Mission level
+160	Driving skill
+161	Number of Truck missions passed
+162	Money made in Truck
+163	Recruited gang members killed
+164	Armor
+165	Energy
+166	Photographs Taken
+167	Rampages attempted
+168	Rampages passed
+169	Flight time
+170	Times drowned
+171	Number of girls pimped
+172	Best position in 8-Track
+173	Time on jetpack
+174	Shooting range levels passed
+175	Most cars parked on 'Valet Parking'
+176	Kills since last checkpoint
+177	Total legitimate kills
+178	Number of 'Bloodring' kills
+179	Total time in bloodring
+180	No more hurricanes Flag
+181	City unlocked
+182	Number of Police bribes
+183	Number of cars stolen
+184	Current number of girlfriends
+185	Number of disastrous dates
+186	Number of girls dated
+187	Number of times scored with a girl
+188	Number of successful dates
+189	Number of girls dumped
+190	Number of prostitutes visited
+191	Number of houses burgled
+192	Number of safes cracked
+193	Burgular status
+194	Number of stolen items sold
+195	Number of eight balls in pool
+196	Total number of wins playing pool
+197	Total number of losses playing pool
+198	Times visited the gym
+199	Body type
+200	Number of meals eaten
+201	Money made in Quarry
+202	Time taken to Complete Quarry
+203	Number of furniture purchased
+204	Favorite console game
+205	Highest civilian peds killed on Rampage
+206	Highest police peds killed on Rampage
+207	Highest civilian vehicles destroyed on Rampage
+208	Highest police vehicles destroyed on Rampage
+209	Highest number of tanks destroyed on Rampage
+210	Pimping level
+211	Kickstart best score
+212	Best lap time in 8-Track
+213	Number of vehicles exported
+214	Number of vehicles imported
+215	Highest basketball score
+216	Fires started
+217	Amount of drugs sold
+218	Amount of drugs bought
+219	Best lap time in dirt track
+220	Best time in dirt track
+221	Best position in dirt track
+222	NRG-500 best time
+223	Flying skill
+224	Respect Mission
+225	Lung capacity
+226	Game gore rating
+227	Game sex rating
+228	Respect Mission Total
+229	Bike skill
+230	Cycling skill
+231	Snapshots taken
+232	Total snapshots
+233	Luck
+234	Territories taken over
+235	Territories lost
+236	Territories held
+237	Highest number of territories held
+238	Gang members recruited
+239	Enemy gang members killed
+240	Friendly gang members killed
+241	Horseshoes collected
+242	Total horseshoes
+243	Oysters collected
+244	Total oysters
+245	Calories
+246	2 Player Rampage best time
+247	2 Player Car Rampage best time
+248	2 Player On Foot Rampage best time
+249	2 Player Chopper Rampage best time
+250	2 Player Bike Rampage best time
+251	'Keepie Uppy' best time
+252	Progress with Denise
+253	Progress with Michelle
+254	Progress with Helena
+255	Progress with Barbara
+256	Progress with Katie
+257	Progress with Millie
+258	Best position in Lowrider Race
+259	Best time in Lowrider Race
+260	Best position in Little Loop
+261	Best time in Little Loop
+262	Best position in Backroad Wanderer
+263	Best time in Backroad Wanderer
+264	Best position in City Circuit
+265	Best time in City Circuit
+266	Best position in Vinewood
+267	Best time in Vinewood
+268	Best position in Freeway
+269	Best time in Freeway
+270	Best position in Into the Country
+271	Best time in Into the Country
+272	Best position in Badlands A
+273	Best time in Badlands A
+274	Best position in Badlands B
+275	Best time in Badlands B
+276	Best position in Dirtbike Danger
+277	Best time in Dirtbike Danger
+278	Best position in Bandito County
+279	Best time in Bandito County
+280	Best position in Go-Go-Kart
+281	Best time in Go-Go-Kart
+282	Best position in San Fierro Fastlane
+283	Best time in San Fierro Fastlane
+284	Best position in San Fierro Hills
+285	Best time in San Fierro Hills
+286	Best position in Country Endurance
+287	Best time in Country Endurance
+288	Best position in SF to LV
+289	Best time in SF to LV
+290	Best position in Dam Rider
+291	Best time in Dam Rider
+292	Best position in Desert Tricks
+293	Best time in Desert Tricks
+294	Best position in LV Ringroad
+295	Best time in LV Ringroad
+296	Best time in World War Aces
+297	Best time in Barnstorming
+298	Best time in Military Service
+299	Best time in Chopper Checkpoint
+300	Best time in Whirly Bird Waypoint
+301	Best time in Heli Hell
+302	Drive-thru mission accomplished
+303	Management Issues mission accomplished
+304	555 WE TIP mission accomplished
+305	Yay Ka-Boom-Boom mission accomplished
+306	Fish in a Barrel mission accomplished
+307	Breaking the Bank at Caligula's mission accomplished
+308	A Home In The Hills mission accomplished
+309	maybe set riot mode
+310	Ryder's mission Robbing Uncle Sam accomplished
+311	Mike Toreno mission accomplished
+312	Architectural Espionage mission accomplished
+313	Jizzy mission accomplished
+314	Reuniting the Families mission accomplished
+315	Catalina 3 mission accomplished
+316	Photo Opportunity mission accomplished
+317	Don Peyote mission accomplished
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+______________________________________________________________________________________________________________
+©2004-2007 spaceeinstein
+If you want to use some of these information, please credit me.
+______________________________________________________________________________________________________________
+SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN  SPACEEINSTEIN
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

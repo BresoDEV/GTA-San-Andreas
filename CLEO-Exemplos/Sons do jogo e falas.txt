@@ -1,0 +1,24 @@
+:WAV_LOAD
+03CF: load_wav 14403 as 1 // 14403 = Sound-ID
+
+:WAV_PRELOAD
+0001: wait 0 ms
+00D6: if
+03D0:   wav 1 loaded
+004D: jump_if_false @WAV_PRELOAD
+03D1: play_wav 1
+
+:WAV_CHECK
+0001: wait 0 ms
+00D6: if
+03D2:   wav 1 ended
+004D: jump_if_false @WAV_CHECK
+040D: unload_wav 1
+...
+
+
+IDS
+23000 celular tocando
+14403  som de raios
+19800 som de contrabaixo
+30803 tipo um sonar

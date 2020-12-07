@@ -1,0 +1,52 @@
+{$CLEO .cs} 
+:TuneP_1 
+03A4: name_thread 'TuneP' 
+
+:TuneP_2 
+0001: wait  0 ms 
+00D6: if  0 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @TuneP_2 
+00D6: if  0 
+00FF:   actor $PLAYER_ACTOR 1 (in-sphere)near_point_on_foot 2491.5  -1667.5  13.35 radius 1.0 1.0 1.0 
+004D: jump_if_false @TuneP_2 
+
+0247: request_model #SLAMVAN 
+06E9: request_car_component #hydralics 
+06E9: request_car_component #NTO_B_S 
+06E9: request_car_component 1115 
+
+:Load_Model_Check 
+0001: wait  0 ms 
+if  and 
+0248:   model #SLAMVAN available 
+06EA:   car_component_available #hydralics 
+06EA:   car_component_available #NTO_B_S 
+06EA:   car_component_available 1115 
+004D: jump_if_false @Load_Model_Check 
+
+00A5: 0@ = create_car #SLAMVAN at 2487.5  -1660.5  13.35 
+0175: set_car 0@ z_angle_to 180.0 
+
+06E7: 1@ = add_car_component #NTO_B_S to_car 0@ 
+06E7: 2@ = add_car_component #hydralics to_car 0@ 
+06E7: 3@ = add_car_component 1115 to_car 0@ 
+
+0229: set_car 0@ color_to  1  1 
+06ED: set_car 0@ paintjob  1 
+
+06EB: release_car_component #hydralics 
+06EB: release_car_component #NTO_B_S 
+06EB: release_car_component 1115 
+0249: release_model #SLAMVAN 
+
+:TuneP_4 
+0001: wait  0 ms 
+00D6: if  0 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @TuneP_4 
+00D6: if  0 
+80FF:   NOT   actor $PLAYER_ACTOR  0 ()near_point_on_foot 2491.5  -1667.5  13.35 radius  2.0  2.0  2.0 
+004D: jump_if_false @TuneP_4 
+01C3: remove_references_to_car 0@  // Like turning a car into any random car 
+0002: jump @TuneP_2 

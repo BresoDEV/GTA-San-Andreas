@@ -1,0 +1,59 @@
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2483.1711 -1650.733 13.4687 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_11 
+0247: load_model #FAM2 
+04ED: load_animation "LOWRIDER" 
+
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if and
+0248:   model #FAM2 available 
+04EE:   animation "LOWRIDER" loaded 
+
+004D: jump_if_false @DUDU_188 
+009A: 2@ = create_actor_pedtype 8 model #FAM2 at 2483.1711 -1650.733 13.4687 
+0223: set_actor 2@ health_to 250 
+0173: set_actor 2@ Z_angle_to 177.6617 
+0812: AS_actor 2@  perform_animation "LRGIRL_IDLELOOP" IFP_file "LOWRIDER" 4.0 loopA 1 lockX 0 lockY 0 lockF 0 time -1 // versionB 
+
+0001: wait 10000 ms 
+0249: release_model #FAM2 
+04EF: release_animation "LOWRIDER" 
+
+
+:DUDU_763
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2483.1711 -1650.733 13.4687 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+0002: jump @DUDU_763 
+
+:DUDU_848
+009B: destroy_actor 2@ 
+0002: jump @DUDU_11 

@@ -1,0 +1,49 @@
+{$CLEO .cs}
+:CarsoundDummy
+03A4: name_thread 'CSDUMMY'
+
+:CarsoundDummy_1
+0001: wait 0 ms
+00D6: if 0
+0256: player $PLAYER_CHAR defined
+004D: jump_if_false @CarsoundDummy_1
+if
+00DF:   actor $PLAYER_ACTOR driving
+004D: jump_if_false @CarsoundDummy_1
+03C0: 0@ = actor $PLAYER_ACTOR car
+0247: request_model #INFERNUS
+
+:CarsoundDummy_3
+0001: wait  0 ms
+if
+0248:   model #INFERNUS available
+004D: jump_if_false @CarsoundDummy_3
+00A5: 1@ = create_car #INFERNUS at 0.5  0.5  713.35
+0249: release_model #INFERNUS
+099A: set_car 1@ collision_detection 0
+0338: set_car 1@ visibility 0
+0683: attach_car 1@ to_car 0@ with_offset 0.0 0.0 4.5 rotation 0.0 0.0 0.0
+
+:CarsoundDummy_5
+0001: wait 500 ms
+00D6: if 0
+0256: player $PLAYER_CHAR defined
+004D: jump_if_false @CarsoundDummy_15
+if   and
+8119:   NOT   car 0@ wrecked
+8119:   NOT   car 1@ wrecked
+00DF:   actor $PLAYER_ACTOR driving
+004D: jump_if_false @CarsoundDummy_15
+if
+0686:   car 1@ attached
+004D: jump_if_false @CarsoundDummy_15
+04C4: create_coordinate 11@ 12@ 13@ from_actor $PLAYER_ACTOR offset 0.0  100.0  0.0
+02E3: 5@ = car 0@ speed
+00A7: car 1@ drive_to 11@ 12@ 13@//---simple drive-to command
+00AD: set_car 1@ max_speed_to  5@//---speed declaration, important!!
+0002: jump @CarsoundDummy_5
+
+:CarsoundDummy_15
+01C3: remove_references_to_car 0@  // Like turning a car into any random car
+00A6: destroy_car 1@
+0002: jump @CarsoundDummy_1

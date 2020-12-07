@@ -1,0 +1,140 @@
+{20107} 09E6: set_burglary_houses_accessible 1 
+{20111} 07FB: set_interior 'ABATOIR' access 1  // Sindacco Abattoir
+{20124} 07FB: set_interior 'AMMUN1' access 1  // Ammu-Nation
+{20137} 07FB: set_interior 'CARMOD1' access 1  // TransFender
+{20150} 07FB: set_interior 'FDREST1' access 1  // World of Coq
+{20163} 07FB: set_interior 'GF1' access 1 
+{20176} 07FB: set_interior 'JETINT' access 1 
+{20189} 07FB: set_interior 'LACS1' access 1  // Sub Urban
+{20202} 07FB: set_interior 'LAHS1B' access 1  // House
+{20215} 07FB: set_interior 'MAFCAS' access 1  // Caligula's Casino
+{20228} 07FB: set_interior 'MAFCAS2' access 1  // Penthouse Suites
+{20241} 07FB: set_interior 'SMASHTV' access 1 
+{20254} 07FB: set_interior 'SVVGHO1' access 1  // Hotel Suite
+{20267} 07FB: set_interior 'SWEETS' access 1  // Sweet's House
+{20280} 07FB: set_interior 'TSDINER' access 1  // Truck Stop
+{20293} 07FB: set_interior 'WUZIBET' access 1  // Wu Zi Mu's
+{20306} 07FB: set_interior 'BARBERS' access 1  // Barber
+{20319} 07FB: set_interior 'BDUPS1' access 1  // B Dup's Crack Palace
+{20332} 07FB: set_interior 'CARMOD2' access 1  // Loco Low Co.
+{20345} 07FB: set_interior 'CARTER' access 1  // Smoke's Crack Palace
+{20358} 07FB: set_interior 'GF2' access 1 
+{20371} 07FB: set_interior 'LAHS1A' access 1  // House
+{20384} 07FB: set_interior 'LASTRIP' access 1  // Strip Club
+{20397} 07FB: set_interior 'RYDERS' access 1  // Ryder's Place
+{20410} 07FB: set_interior 'SVVGHO2' access 1  // Hotel Suite
+{20423} 07FB: set_interior 'VGHSB1' access 1  // House
+{20436} 07FB: set_interior 'VGHSB3' access 1  // House
+{20449} 07FB: set_interior 'BARBER2' access 1  // Barber
+{20462} 07FB: set_interior 'BDUPS' access 1  // B Dup's apartment
+{20475} 07FB: set_interior 'BIKESCH' access 1  // Bike School
+{20488} 07FB: set_interior 'BROTHL1' access 1 
+{20501} 07FB: set_interior 'CARLS' access 1  // The Johnson House
+{20514} 07FB: set_interior 'CARMOD3' access 1  // Wheel Arch Angels
+{20527} 07FB: set_interior 'CHANGER' access 1  // Wardrobe
+{20540} 07FB: set_interior 'CSSPRT' access 1  // Pro-Laps
+{20553} 07FB: set_interior 'DRIVES' access 1  // Driving School
+{20566} 07FB: set_interior 'DRIVES2' access 1  // Driving School
+{20579} 07FB: set_interior 'GENOTB' access 1  // Inside Track Betting
+{20592} 07FB: set_interior 'GF3' access 1 
+{20605} 07FB: set_interior 'LAHSB4' access 1  // House
+{20618} 07FB: set_interior 'OGLOCS' access 1  // OG Loc's
+{20631} 07FB: set_interior 'PAPER' access 1  // Planning Department
+{20644} 07FB: set_interior 'PDOMES' access 1  // The Pleasure Domes
+{20657} 07FB: set_interior 'PDOMES2' access 1  // The Pleasure Domes
+{20670} 07FB: set_interior 'POLICE3' access 1  // LVPD HQ
+{20683} 07FB: set_interior 'SEXSHOP' access 1  // Sex Shop
+{20696} 07FB: set_interior 'S1TEST' access 1 
+{20709} 07FB: set_interior 'STRIP2' access 1  // Strip Club
+{20722} 07FB: set_interior 'STUDIO' access 1 
+{20735} 07FB: set_interior 'TATTO3' access 1  // Tattoo Parlor
+{20748} 07FB: set_interior 'AMMUN2' access 1  // Ammu-Nation
+{20761} 07FB: set_interior 'DINER1' access 1  // Diner
+{20774} 07FB: set_interior 'DIRBIKE' access 1  // Dirt Stadium
+{20787} 07FB: set_interior 'GF4' access 1 
+{20800} 07FB: set_interior 'LAHS2A' access 1  // House
+{20813} 07FB: set_interior 'LAHSS6' access 1  // House
+{20826} 07FB: set_interior 'SFHSM2' access 1  // House
+{20839} 07FB: set_interior 'X711S2' access 1  // 24-7
+{20852} 07FB: set_interior 'CSDESGN' access 1  // Victim
+{20865} 07FB: set_interior 'DINER2' access 1  // Diner
+{20878} 07FB: set_interior 'FDPIZA' access 1  // Pizza Stack
+{20891} 07FB: set_interior 'GANG' access 1  // Vagos Gang House
+{20904} 07FB: set_interior 'GF5' access 1 
+{20917} 07FB: set_interior 'GYM1' access 1  // Ganton Gym
+{20930} 07FB: set_interior 'LACRAK' access 1  // Crack Den
+{20943} 07FB: set_interior 'LAHSB3' access 1  // House
+{20956} 07FB: set_interior 'MADDOGS' access 1  // Madd Dogg's Crib
+{20969} 07FB: set_interior 'MDDOGS' access 1  // Madd Dogg's Crib
+{20982} 07FB: set_interior 'SFHSB1' access 1  // House
+{20995} 07FB: set_interior 'SVHOT1' access 1  // Hotel Suite
+{21008} 07FB: set_interior 'VGHSM2' access 1  // House
+{21021} 07FB: set_interior 'AMMUN3' access 1  // Ammu-Nation
+{21034} 07FB: set_interior 'AMMUN5' access 1  // Ammu-Nation
+{21047} 07FB: set_interior 'BROTHEL' access 1  // Whore House
+{21060} 07FB: set_interior 'GF6' access 1 
+{21073} 07FB: set_interior 'GYM2' access 1  // Cobra Marital Arts
+{21086} 07FB: set_interior 'LAHSB1' access 1  // House
+{21099} 07FB: set_interior 'POLICE1' access 1  // LSPD HQ
+{21112} 07FB: set_interior 'RCPLAY' access 1  // Zero's RC Shop
+{21125} 07FB: set_interior 'REST2' access 1  // Secret Valley
+{21138} 07FB: set_interior 'SFHSB2' access 1  // House
+{21151} 07FB: set_interior 'SFHSS2' access 1  // House
+{21164} 07FB: set_interior 'SVCUNT' access 1  // Safe House
+{21177} 07FB: set_interior 'SVSFSM' access 1  // Safe House
+{21190} 07FB: set_interior 'X7_11S' access 1  // 24-7
+{21203} 07FB: set_interior '8TRACK' access 1  // 8-Track Stadium
+{21216} 07FB: set_interior 'AMMUN4' access 1  // Ammu-Nation
+{21229} 07FB: set_interior 'GYM3' access 1  // Below the Belt Gym
+{21242} 07FB: set_interior 'LAHSB2' access 1  // House
+{21255} 07FB: set_interior 'OFTEST' access 1 
+{21268} 07FB: set_interior 'BURHOUS' access 1  // Colonel Fuhrberger's
+{21281} 07FB: set_interior 'SFHSS1' access 1  // House
+{21294} 07FB: set_interior 'SVLAMD' access 1  // Safe House
+{21307} 07FB: set_interior 'FDCHICK' access 1  // Cluckin' Bell
+{21320} 07FB: set_interior 'LAHS2B' access 1  // House
+{21333} 07FB: set_interior 'SFHSB3' access 1  // House
+{21346} 07FB: set_interior 'SVGNMT2' access 1  // Motel room
+{21359} 07FB: set_interior 'SVVGMD' access 1  // Safe House
+{21372} 07FB: set_interior 'DESHOUS' access 1  // Abandoned AC tower
+{21385} 07FB: set_interior 'FDBURG' access 1  // Burger Shot
+{21398} 07FB: set_interior 'POLICE2' access 1  // SFPD HQ
+{21411} 07FB: set_interior 'SVGNMT1' access 1  // Motel room
+{21424} 07FB: set_interior 'TRICAS' access 1  // The Four Dragons
+{21437} 07FB: set_interior 'SVSFMD' access 1  // Safe House
+{21450} 07FB: set_interior 'VGHSM3' access 1  // House
+{21463} 07FB: set_interior 'X711S3' access 1  // 24-7
+{21476} 07FB: set_interior 'BAR2' access 1  // Bar
+{21489} 07FB: set_interior 'SVLASM' access 1  // Safe House
+{21502} 07FB: set_interior 'BARBER3' access 1  // Barber
+{21515} 07FB: set_interior 'MOROOM' access 1 
+{21528} 07FB: set_interior 'SVLABIG' access 1  // Safe House
+{21541} 07FB: set_interior 'CSEXL' access 1  // Didier Sachs
+{21554} 07FB: set_interior 'AIRPOR2' access 1 
+{21567} 07FB: set_interior 'AIRPORT' access 1 
+{21580} 07FB: set_interior 'CSCHP' access 1  // Binco
+{21593} 07FB: set_interior 'MOTEL1' access 1  // Jefferson Motel
+{21606} 07FB: set_interior 'SFHSM1' access 1  // House
+{21619} 07FB: set_interior 'VGHSS1' access 1  // House
+{21632} 07FB: set_interior 'VGSHM2' access 1  // House
+{21645} 07FB: set_interior 'VGSHM3' access 1  // House
+{21658} 07FB: set_interior 'VGSHS2' access 1  // House
+{21671} 07FB: set_interior 'TATTOO' access 1  // Tattoo Parlor
+{21684} 07FB: set_interior 'X7_11C' access 1  // 24-7
+{21697} 07FB: set_interior 'BAR1' access 1  // Club
+{21710} 07FB: set_interior 'DAMIN' access 1  // Generator Hall
+{21723} 07FB: set_interior 'FDDONUT' access 1  // Rusty Brown's
+{21736} 07FB: set_interior 'TATTO2' access 1  // Tattoo Parlor
+{21749} 07FB: set_interior 'X7_11D' access 1  // 24-7
+{21762} 07FB: set_interior 'ATRIUME' access 1  // Atrium
+{21775} 07FB: set_interior 'ATRIUMX' access 1  // Attrium
+{21788} 07FB: set_interior 'CLOTHGP' access 1  // Zip
+{21801} 07FB: set_interior 'GENWRHS' access 1  // Warehouse
+{21814} 07FB: set_interior 'UFOBAR' access 1  // Lil' Probe Inn
+{21827} 07FB: set_interior 'X7_11B' access 1  // 24-7
+{21840} 07FB: set_interior 'GF1' access 1 
+{21853} 07FB: set_interior 'GF2' access 1 
+{21866} 07FB: set_interior 'GF3' access 1 
+{21879} 07FB: set_interior 'GF4' access 1 
+{21892} 07FB: set_interior 'GF5' access 1 
+{21905} 07FB: set_interior 'GF6' access 1 

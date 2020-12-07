@@ -1,0 +1,37 @@
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread "MEMORY_ADRESSES" 
+0826: enable_hud 0 
+
+:MEMORY_ADRESSES_23
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @MEMORY_ADRESSES_23 
+0A8D: $CHEAT1 = read_memory 9867536 size 4 virtual_protect 0 
+00D6: if 
+04A4:   $CHEAT1 == 1297044559 // moto
+004D: jump_if_false @MEMORY_ADRESSES_23 
+0A8C: write_memory 9867536 size 4 value 0 virtual_protect 0 
+0002: jump @MEMORY_ADRESSES_98 
+
+:MEMORY_ADRESSES_98
+0001: wait 0 ms 
+0A8D: $CHEAT2 = read_memory 9867536 size 4 virtual_protect 0 
+00D6: if 
+04A4:   $CHEAT2 == 1128874828 // cicl
+004D: jump_if_false @MEMORY_ADRESSES_98 
+0A8C: write_memory 9867536 size 4 value 0 virtual_protect 0 
+0002: jump @MEMORY_ADRESSES_157 
+
+:MEMORY_ADRESSES_157
+0001: wait 0 ms 
+0A8D: $CHEAT3 = read_memory 9867536 size 3 virtual_protect 0 
+00D6: if 
+04A4:   $CHEAT3 == 4543553 // eta
+004D: jump_if_false @MEMORY_ADRESSES_157 
+0AA5: call 4225105 1 pop 1 468   // Endereço que carrega a Sanchez como cheat 
+0A8C: write_memory 9867536 size 4 value 0 virtual_protect 0 
+0002: jump @MEMORY_ADRESSES_23 

@@ -1,0 +1,53 @@
+
+
+
+
+
+
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2425.76 -1641.12 13.4609 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_11 
+0247: load_model 1632
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if and
+0248:   model 1632 available 
+004D: jump_if_false @DUDU_188 
+0107: 1@ = create_object 1632 at 2425.76 -1641.12 13.4609 
+0177: set_object 1@ Z_angle_to 0.0 
+03CA:   object 1@ exists 
+0550: keep_object 1@ in_memory 1 
+0001: wait 10000 ms 
+0249: release_model 1632 
+
+:DUDU_763
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2425.76 -1641.12 13.4609 radius 80.0 80.0 80.0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+0002: jump @DUDU_763 
+
+:DUDU_848
+0108: destroy_object 1@
+0002: jump @DUDU_11 

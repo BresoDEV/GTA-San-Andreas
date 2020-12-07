@@ -1,0 +1,24 @@
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'HACK_2_EDU' 
+
+:HACK_2_EDU_19
+0001: wait 0 ms 
+00D6: if and
+0AB0:   key_pressed 9 
+004D: jump_if_false @HACK_2_EDU_19 
+0A92: create_custom_thread "TESTE.cm"
+0A93: end_custom_thread
+
+иииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии
+
+{$CLEO .cm}
+
+//-------------MAIN---------------
+03A4: name_thread 'TESTE' 
+
+:HACK_2_EDU_19
+0001: wait 0 ms 
+00BB: show_text_lowpriority GXT 'IE23' time 3000 flag 1  // ~s~This vehicle is not required for export.
+ 004E: end_thread

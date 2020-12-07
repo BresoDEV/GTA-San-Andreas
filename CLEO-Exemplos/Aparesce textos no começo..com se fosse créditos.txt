@@ -1,0 +1,31 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'TEXTO' 
+
+:TITL_53
+033F: set_text_draw_letter_size 0.8 1.8 
+0342: enable_text_draw_centered 1 
+0343: set_text_draw_linewidth 600.0 
+060D: draw_text_shadow 0 color_RGBA 0 0 0 255 
+033E: set_draw_text_position 320.0 50.0 GXT 'TESTE_1'  
+033F: set_text_draw_letter_size 0.8 1.8 
+0342: enable_text_draw_centered 1 
+033E: set_draw_text_position 320.0 90.0 GXT 'TESTE_2'  // 
+033F: set_text_draw_letter_size 0.8 1.8 
+0342: enable_text_draw_centered 1 
+033E: set_draw_text_position 320.0 150.0 GXT 'TESTE_3'  
+033F: set_text_draw_letter_size 0.8 1.8 
+0342: enable_text_draw_centered 1 
+033E: set_draw_text_position 320.0 200.0 GXT 'TESTE_4'  
+033F: set_text_draw_letter_size 0.8 1.8 
+0342: enable_text_draw_centered 1 
+033E: set_draw_text_position 320.0 250.0 GXT 'TESTE_5'  
+0001: wait 5000 ms 
+00D6: if 
+03F0: enable_text_draw 0 
+03E6: remove_text_box 
+0A93: end_custom_thread 

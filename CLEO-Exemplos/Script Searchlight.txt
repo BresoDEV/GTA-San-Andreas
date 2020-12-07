@@ -1,0 +1,55 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2494.653 -1701.733 15.553 radius 380.0 380.0 380.0 
+004D: jump_if_false @DUDU_11 
+0247: load_model #FREEWAY 
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if and
+0248:   model #FREEWAY available 
+004D: jump_if_false @DUDU_188 
+00A5: 1@ = create_car #FREEWAY at 2494.653 -1701.733 12.553 
+0175: set_car 1@ Z_angle_to 90.0 
+06C1: create_searchlight 20@ on_car 1@ with_offset 0.0 0.0 2.0 radius 0.2 target 2494.014 -1699.256 148.2696 radius 10.0 
+06B4: set_searchlight 20@ path_between 2800.014 -1198.0 148.2696 and 2494.014 -1900.0 148.2696 speed 5.8 
+0A02: set_searchlight 20@ lights_through_obstacles 1
+0001: wait 10000 ms 
+0249: release_model #FREEWAY
+
+:DUDU_763
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2494.653 -1701.733 15.553 radius 380.0 380.0 380.0
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+0002: jump @DUDU_763 
+
+:DUDU_848
+00A6: destroy_car 1@ 
+06B2: destroy_searchlight 20@ 
+0002: jump @DUDU_11 

@@ -1,0 +1,413 @@
+// This file was decompiled using SASCM.ini published by GTAG (http://gtag.gtagaming.com/opcode-database) on 6.14.2013
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'ZAD' 
+$VARIAVEL_1_MENU1 = 0 
+$VARIAVEL_2_MENU1 = 0 
+$VARIAVEL_3_MENU1 = 0 
+$VARIAVEL_4_MENU1 = 0 
+$VARIAVEL_5_MENU1 = 0 
+$VARIAVEL_6_MENU1 = 0 
+$VARIAVEL_7_MENU1 = 0 
+$VARIAVEL_8_MENU1 = 0 
+$VARIAVEL_9_MENU1 = 0 
+$VARIAVEL_10_MENU1 = 0 
+$VARIAVEL_11_MENU1 = 0 
+$VARIAVEL_12_MENU1 = 0
+
+$ROWROW_1 = 0
+$ROWROW_2 = 0
+
+ 
+
+:ZAD_607
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 76 //M 
+004D: jump_if_false @ZAD_607 
+0ADF: add_dynamic_GXT_entry "TITULO" text "BRESO"
+ 
+0ADF: add_dynamic_GXT_entry "MENU1_1" text "Opcao 1" 
+0ADF: add_dynamic_GXT_entry "MENU1_2" text "Opcao 2" 
+0ADF: add_dynamic_GXT_entry "MENU1_3" text "Opcao 3" 
+0ADF: add_dynamic_GXT_entry "MENU1_4" text "Opcao 4" 
+0ADF: add_dynamic_GXT_entry "MENU1_5" text "Opcao 5"
+0ADF: add_dynamic_GXT_entry "MENU1_6" text "Opcao 6" 
+0ADF: add_dynamic_GXT_entry "MENU1_7" text "Opcao 7" 
+0ADF: add_dynamic_GXT_entry "MENU1_8" text "Opcao 8" 
+0ADF: add_dynamic_GXT_entry "MENU1_9" text "Opcao 9" 
+0ADF: add_dynamic_GXT_entry "MENU110" text "Opcao 10" 
+0ADF: add_dynamic_GXT_entry "MENU111" text "Opcao 11"
+0ADF: add_dynamic_GXT_entry "MENU112" text "Opcao 12"
+0002: jump @ZAD_779 
+
+:ZAD_779
+01B4: set_player $PLAYER_CHAR can_move 0 
+08D4: $MENU_1 = create_panel_with_title 'TITULO' position 30.0 60.0 width 200.0 columns 2 interactive 1 background 1 alignment 1 
+08DB: set_panel $MENU_1 column 0 header 'DUMMY' data 'MENU1_1' 'MENU1_2' 'MENU1_3' 'MENU1_4' 'MENU1_5' 'MENU1_6' 'MENU1_7' 'MENU1_8' 'MENU1_9' 'MENU110' 'MENU111' 'MENU112'
+090E: set_panel $MENU_1 active_row $ROWROW_1 
+gosub @Menu_1_Painel2
+08D7: $ESCOLHA_MENU1 = panel $MENU_1 active_row 
+09DB: set_panel $MENU_1 column 0 width 150 
+
+09DB: set_panel $MENU_1 column 1 width 50 
+
+0002: jump @ZAD_962 
+
+:ZAD_962
+0001: wait 0 ms 
+00D6: if 
+00E1:   player 0 pressed_key 15 
+004D: jump_if_false @ZAD_1136  
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+0002: jump @ZAD_607 
+
+:ZAD_1136
+00D6: if 
+00E1:   player 0 pressed_key 16 
+004D: jump_if_false @ZAD_962 
+08D7: $ESCOLHA_MENU1 = panel $MENU_1 active_row 
+0008: $ESCOLHA_MENU1 += 1 
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 1 
+004D: jump_if_false @ZAD_1245 
+0001: wait 250 ms 
+018C: play_sound 1056 at 0.0 0.0 0.0 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_1_MENU1 == 0
+then
+$VARIAVEL_1_MENU1 = 1
+else
+$VARIAVEL_1_MENU1 = 0
+end
+$ROWROW_1 = 0
+//FUNCAO
+0002: jump @ZAD_779 
+
+:ZAD_1245
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 2 
+004D: jump_if_false @ZAD_1302 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_2_MENU1 == 0
+then
+$VARIAVEL_2_MENU1 = 1
+else
+$VARIAVEL_2_MENU1 = 0
+end
+$ROWROW_1 = 1
+
+//FUNCAO
+0002: jump @ZAD_779 
+
+:ZAD_1302
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 3 
+004D: jump_if_false @ZAD_1379 
+0001: wait 250 ms 
+018C: play_sound 1056 at 0.0 0.0 0.0 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0
+if
+$VARIAVEL_3_MENU1 == 0
+then
+$VARIAVEL_3_MENU1 = 1
+else
+$VARIAVEL_3_MENU1 = 0
+end
+//FUNCAO 
+$ROWROW_1 = 2
+
+0002: jump @ZAD_779 
+
+:ZAD_1379
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 4 
+004D: jump_if_false @ZAD_1436 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_4_MENU1 == 0
+then
+$VARIAVEL_4_MENU1 = 1
+else
+$VARIAVEL_4_MENU1 = 0
+end
+$ROWROW_1 = 3
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1436
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 5 
+004D: jump_if_false @ZAD_1493 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_5_MENU1 == 0
+then
+$VARIAVEL_5_MENU1 = 1
+else
+$VARIAVEL_5_MENU1 = 0
+end
+$ROWROW_1 = 4
+//FUNCAO 
+0002: jump @ZAD_779  
+
+:ZAD_1493
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 6 
+004D: jump_if_false @ZAD_1550 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0  
+if
+$VARIAVEL_6_MENU1 == 0
+then
+$VARIAVEL_6_MENU1 = 1
+else
+$VARIAVEL_6_MENU1 = 0
+end
+$ROWROW_1 = 5
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1550
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 7 
+004D: jump_if_false @ZAD_1607 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_7_MENU1 == 0
+then
+$VARIAVEL_7_MENU1 = 1
+else
+$VARIAVEL_7_MENU1 = 0
+end
+$ROWROW_1 = 6
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1607
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 8 
+004D: jump_if_false @ZAD_1664 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_8_MENU1 == 0
+then
+$VARIAVEL_8_MENU1 = 1
+else
+$VARIAVEL_8_MENU1 = 0
+end
+$ROWROW_1 = 7
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1664
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 9 
+004D: jump_if_false @ZAD_1721 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_9_MENU1 == 0
+then
+$VARIAVEL_9_MENU1 = 1
+else
+$VARIAVEL_9_MENU1 = 0
+end
+$ROWROW_1 = 8
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1721
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 10 
+004D: jump_if_false @ZAD_1778 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_10_MENU1 == 0
+then
+$VARIAVEL_10_MENU1 = 1
+else
+$VARIAVEL_10_MENU1 = 0
+end
+$ROWROW_1 = 9
+//FUNCAO 
+0002: jump @ZAD_779 
+
+:ZAD_1778
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 11 
+004D: jump_if_false @ZAD_1835 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_11_MENU1 == 0
+then
+$VARIAVEL_11_MENU1 = 1
+else
+$VARIAVEL_11_MENU1 = 0
+end
+$ROWROW_1 = 10
+//FUNCAO 
+0002: jump @ZAD_779  
+
+:ZAD_1835
+00D6: if 
+0038:   $ESCOLHA_MENU1 == 12 
+004D: jump_if_false @ZAD_962 
+0001: wait 250 ms 
+08DA: remove_panel $MENU_1 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+if
+$VARIAVEL_12_MENU1 == 0
+then
+$VARIAVEL_12_MENU1 = 1
+else
+$VARIAVEL_12_MENU1 = 0
+end
+$ROWROW_1 = 11
+//FUNCAO 
+0002: jump @ZAD_779 
+
+
+
+
+
+
+:Menu_1_Painel2
+if
+$VARIAVEL_1_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_1" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_1" text "~r~Off" 
+end
+if
+$VARIAVEL_2_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_2" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_2" text "~r~Off" 
+end
+if
+$VARIAVEL_3_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_3" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_3" text "~r~Off" 
+end
+if
+$VARIAVEL_4_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_4" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_4" text "~r~Off" 
+end
+if
+$VARIAVEL_5_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_5" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_5" text "~r~Off" 
+end
+if
+$VARIAVEL_6_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_6" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_6" text "~r~Off" 
+end
+if
+$VARIAVEL_7_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_7" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_7" text "~r~Off" 
+end
+if
+$VARIAVEL_8_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_8" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_8" text "~r~Off" 
+end
+if
+$VARIAVEL_9_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_9" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_9" text "~r~Off" 
+end
+if
+$VARIAVEL_10_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_10" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_10" text "~r~Off" 
+end
+if
+$VARIAVEL_11_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_11" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_11" text "~r~Off" 
+end
+if
+$VARIAVEL_12_MENU1 == 1
+then
+0ADF: add_dynamic_GXT_entry "MENU_12" text "~g~ON" 
+else
+0ADF: add_dynamic_GXT_entry "MENU_12" text "~r~Off" 
+end
+08DB: set_panel $MENU_1 column 1 header 'DUMMY' data 'MENU_1' 'MENU_2' 'MENU_3' 'MENU_4' 'MENU_5' 'MENU_6' 'MENU_7' 'MENU_8' 'MENU_9' 'MENU_10' 'MENU_11' 'MENU_12'
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

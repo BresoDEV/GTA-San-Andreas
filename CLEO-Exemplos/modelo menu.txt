@@ -1,0 +1,130 @@
+:INICIO_MENU_30  
+
+01B4: set_player $PLAYER_CHAR can_move 0
+08D4: $MENU_30  = create_panel_with_title 'BRESO' position 30.0 60.0 width 170.0 columns 1 interactive 1 background 0 alignment 1
+08DB:  set_panel $MENU_30  column 0 header 'DUMMY' data  'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'EMPTY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY'
+08D7: $ESCOLHA_MENU_30  = panel $MENU_30  active_row 
+jump @ESCOLHAS_MENU_30  
+
+:ESCOLHAS_MENU_30   
+0001: wait 0 ms 
+00D6: if 
+00E1:   player 0 pressed_key 15  //fecha o menu 1
+004D: jump_if_false @OPCAO_1_MENU_30   
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250
+08DA: remove_panel $MENU_30  
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+jump @INICIO_MENU_1     
+
+:OPCAO_1_MENU_30     
+00D6: if 
+00E1:   player 0 pressed_key 16 
+004D: jump_if_false @ESCOLHAS_MENU_30    
+
+08D7: $ESCOLHA_MENU_30  = panel $MENU_30  active_row 
+0008: $ESCOLHA_MENU_30  += 1 
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 1 
+004D: jump_if_false @OPCAO_2_MENU_30   
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+ 
+ 
+:OPCAO_2_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 2 
+004D: jump_if_false @OPCAO_3_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30     
+
+:OPCAO_3_MENU_30      
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 3 
+004D: jump_if_false @OPCAO_4_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+
+
+:OPCAO_4_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 4 
+004D: jump_if_false @OPCAO_5_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+
+:OPCAO_5_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 5 
+004D: jump_if_false @OPCAO_6_MENU_30   
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+:OPCAO_6_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 6 
+004D: jump_if_false @OPCAO_7_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+
+
+:OPCAO_7_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 7 
+004D: jump_if_false @OPCAO_8_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30     
+
+:OPCAO_8_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 8 
+004D: jump_if_false @OPCAO_9_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30    
+
+:OPCAO_9_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 9 
+004D: jump_if_false @OPCAO_10_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30    
+
+:OPCAO_10_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 10 
+004D: jump_if_false @OPCAO_11_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30     
+
+
+:OPCAO_11_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 11
+004D: jump_if_false @OPCAO_12_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30   
+
+:OPCAO_12_MENU_30       
+00D6: if 
+0038:   $ESCOLHA_MENU_30  == 12 
+004D: jump_if_false @ESCOLHAS_MENU_30  
+018C: play_sound 1056 at 0.0 0.0 0.0 
+wait 250 
+jump @ESCOLHAS_MENU_30     
+

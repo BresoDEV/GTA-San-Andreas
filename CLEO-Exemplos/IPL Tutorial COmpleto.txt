@@ -1,0 +1,559 @@
+There are a whole lots new categories Rockstar made for the IPLs in San Andreas.
+
+Inst
+Item Placement
+CODE
+ID#, DFF Name, Interior#, X-Coord, Y-Coord, Z-Coord, RotationX, RotationY, RotationZ, RotationR, Flags
+
+EX: 5105, Stordralas2, 0, 2543.460938, -2142.28125, 10.1953125, 0, 0, 0, 1, 99e
+By Steve: Explanation of the new LOD system in SA
+
+
+Cull
+Creates rainfree zones, wastefree zones, map reflections, TV screens, and temporary camera movements.
+CODE
+centerX, centerY, centerZ, 0, Ywidth, bottomZ, Xwidth, 0, topZ, Effect, Vx, Vy, Vz, Cm
+
+Vx, Vy, Vz - mirror direction (like [-1 0 0] or [0 1 0] or [0 0 -1])
+Cm - mirror plane coordinate in direction axis (See this for more information)
+Flags:
+-1 - default for reflective surfaces; four stars, camera stops outside of cull area and tracks player remotely
+0 - uses player viewpoint for realtime reflections
+1 - normal reflection; forces a close camera mode
+2 - no reflection; camera stops outside of cull area and tracks player remotely
+4
+8 - No weather effect (rain), shiney floor when wet
+9 - (is listed in the file) no reflection
+16 - no reflection
+32
+64
+128
+256
+512
+1024 - uses player viewpoint for realtime reflections
+2048
+4096 - uses player viewpoint for realtime reflections
+8192
+16384 - uses player viewpoint for realtime reflections
+32768
+33792 - uses player viewpoint for realtime reflections
+
+EX: 1.7363, 29.5882, 198.602, 0, 8.15653, 198.602, 2.4303, 0, 203.101, 1, 0, 0, 1, 198.595
+Reference
+Reference 2
+more findings here
+Reference 3
+
+
+Path
+Creates permanent paths for vehicles, pedestrians, and boats (this is unused in San Andreas, use nodes.dat).
+CODE
+Type, Next, 0, X-Coord, Y-Coord, Z-Coord, Median (Width), Left, Right, Flag1, Flag2, Flag3, Flag4
+
+EX: 2, 2, 0, -27704.7, 26283.1, 0, 5, 1, 1, 1, 0, 1, 0
+Reference
+By Steve: Explanation of new paths system in SA.
+
+
+Grge
+Creates garages for the main.scm to use.
+CODE
+X1, Y1, Z1, frontX, frontY, X2, Y2, Z2, Door, Garage, Name
+
+X, Y, Z = corners of garage, position doesn't matter as long as it makes a box
+FrontX, Y = lower right, position doesn't matter as long as it makes a box
+Door = Type of door
+1 door opens up and out, camera remotely follows player
+2 door opens straight up, camera remotely follows player
+3 door opens up and in, camera remotely follows player
+4 door opens straight up, camera follows player
+5 door opens up and out, camera follows player
+6 door opens straight up, camera follows player
+7 door opens up and in, camera follows player
+Garage = Type of garage
+1 Placeholder garage (inactive garage)
+2 Bomb shop with 5 second detonator
+3 Bomb shop with engine ignition detonation
+4 Bomb shop with remote-control detonator
+5 Spray garage
+15 ?
+16 Save garage (Ganton)
+17 Save garage (Santa Maria Beach)
+18 Save garage (Rockshore West)
+19 ?
+24 Save garage (Fort Carson)
+25 Save garage (Verdant Meadows)
+26 Save garage (Dillimore)
+27 Save garage (Prickle Pine)
+28 Save garage (Whitewood Estates)
+29 Save garage (Palomino Creek)
+30 Save garage (Redsands West)
+31 Save garage (El Corona)
+32 Save garage (Muholland)
+33 Los Santos impound lot
+34 San Fierro impound lot
+35 Las Venturas impound lot
+36 Loco Low Co (opens only for lowriders)
+37 Wheel Arch Angels (opens only for street racers)
+38 Transfender (opens for anything else)
+39 Save garage (Calton Heights)
+40 Save garage (Paradiso)
+41 Save garage (Doherty)
+42 Save garage (Hashbury)
+43 Burglary
+44 AT 400 hangar (garage door opens very slow)
+45 Verdant Meadows hangar
+Name is used to edit garage through the SCM
+EX: 2002.96, 2303.72, 9.61706, 2010.36, 2303.72, 2002.96, 2317.59, 13.9914, 1, 2, blob2
+Reference
+Reference 2
+
+
+Enex
+Creates interior connection to real world
+CODE
+X1, Y1, Z1, ROT, R1, R2, C8, X2, Y2, Z2, Rot2, Int, Mark, Name, Sky, I2, Time On, Time Off
+
+XYZ1 - entrance location
+ROT - ???, useless angle in radians?
+R1 - X radius of entry
+R2 - Y radius of entry
+C8 - constant 8
+XYZ2 - exit location
+Rot2 - exit rotation in degrees
+Int - The target interior number
+Mark - The type of marker
+Name - interior name, used to find the counterpart and to identify via mission script
+Sky - Sky color changer
+I2 - unknown integer flags, could be weather related
+Time On - enables the marker at this time
+Time Off - disables the marker at this time
+
+Mark explanations by OrionSR and pdescobar
+Brief tutorial by pdescobar (17th post down)
+
+List of interiors by spaceeinstein (see rest at GTAModding.com)
+Number	Name	Description
+1 	ABATOIR	Sindacco Abattoir
+1 	AMMUN1	Ammu-Nation
+1 	CARMOD1	TransFender
+1 	FDREST1	World of Coq
+1 	GF1	Denise's
+1 	JETINT	Shamal interior
+1 	LACS1	Sub Urban
+1 	LAHS1B	House
+1 	MAFCAS	Caligulas Casino
+1 	MAFCAS2	Penthouse Suites
+1 	-	Saint Mark's
+1 	SMASHTV	Warehouse
+1 	-	Stadium with wooden sandbox
+1 	SVVGHO1	Hotel Suite
+1 	SWEETS	Sweet's House
+1 	-	Trailer
+2 	TSDINER	Truck Stop
+2 	WUZIBET	Wu Zi Mu's
+2 	BARBERS	Barber
+2 	BDUPS1	B Dup's Crack Palace
+2 	CARMOD2	Loco Low Co.
+2 	CARTER	Smokes Crack Palace
+2 	GF2	Katie's
+2 	LAHS1A	House
+2 	LASTRIP	Strip Club
+2 	RYDERS	Ryder's Place
+2 	SVVGHO2	Hotel Suite
+2 	VGHSB1	House
+2 	VGHSB3	House
+3 	BARBER2	Barber
+3 	BDUPS	B Dup's apartment
+3 	BIKESCH	Bike School
+3 	BROTHL1	Whore House
+3 	CARLS	The Johnson House
+3 	CARMOD3	Wheel Arch Angels
+3 	CHANGER	Wardrobe
+3 	CSSPRT	Pro-Laps
+3 	DRIVES	Driving School
+3 	DRIVES2	Driving School
+3 	GENOTB	Inside Track Betting
+3 	GF3	Helena's
+3 	LAHSB4	House
+3 	OGLOCS	OG Loc's
+3 	PAPER	Planning Department
+3 	PDOMES	The Pleasure Domes
+3 	PDOMES2	The Pleasure Domes
+3 	POLICE3	LVPD HQ
+3 	SEXSHOP	Sex Shop
+3 	S1TEST	Middle of nowhere
+3 	STRIP2	Strip Club
+3 	STUDIO	Blastin' Fools Records studio
+3 	TATTO3	Tattoo Parlor
+3 	LAHS1A	House
+3 	LASTRIP	Strip Club
+3 	RYDERS	Ryder's Place
+3 	SVVGHO2	Hotel Suite
+3 	VGHSB1	House
+3 	VGHSB3	House
+Not arsed to make the whole thing table
+2 - Salvatore's Caligula room
+3 BARBER2 Barber
+3 BDUPS B Dup's apartment
+3 BIKESCH Bike School
+3 BROTHL1 Whore House
+3 CARLS The Johnson House
+3 CARMOD3 Wheel Arch Angels
+3 CHANGER Wardrobe
+3 CSSPRT Pro-Laps
+3 DRIVES Driving School
+3 DRIVES2 Driving School
+3 GENOTB Inside Track Betting
+3 GF3 Helena's
+3 LAHSB4 House
+3 OGLOCS OG Loc's
+3 PAPER Planning Department
+3 PDOMES The Pleasure Domes
+3 PDOMES2 The Pleasure Domes
+3 POLICE3 LVPD HQ
+3 SEXSHOP Sex Shop
+3 S1TEST Middle of nowhere
+3 STRIP2 Strip Club
+3 STUDIO Blastin' Fools Records studio
+3 TATTO3 Tattoo Parlor
+4 AMMUN2 Ammu-Nation
+4 DINER1 Diner
+4 DIRBIKE Dirt Stadium
+4 GF4 Michelle's
+4 LAHS2A House
+4 LAHSS6 House
+4 SFHSM2 House
+4 X711S2 24-7
+5 CSDESGN Victim
+5 DINER2 Diner
+5 FDPIZA Pizza Stack
+5 GANG Vagos Gang House
+5 GF5 Barbara's
+5 GYM1 Ganton Gym
+5 LACRAK Crack Den
+5 LAHSB3 House
+5 MADDOGS Madd Dogg's Crib
+5 MDDOGS Madd Dogg's Crib
+5 SFHSB1 House
+5 SVHOT1 Hotel Suite
+5 VGHSM2 House
+6 AMMUN3 Ammu-Nation
+6 AMMUN5 Ammu-Nation
+6 BROTHEL Whore House
+6 GF6 Millie's
+6 GYM2 Cobra Marital Arts
+6 LAHSB1 House
+6 POLICE1 LSPD HQ
+6 RCPLAY Zero's RC Shop
+6 REST2 Secret Valley
+6 SFHSB2 House
+6 SFHSS2 House
+6 SVc*nt Safe House
+6 SVSFBG Safe House
+6 SVSFSM Safe House
+6 X7_11S 24-7
+7 8TRACK 8-Track Stadium
+7 AMMUN4 Ammu-Nation
+7 GYM3 Below the Belt Gym
+7 LAHSB2 House
+7 OFTEST Middle of nowhere
+8 BURHOUS Colonel Fuhrberger's
+8 SFHSS1 House
+8 SVLAMD Safe House
+9 FDCHICK Cluckin' Bell
+9 LAHS2B House
+9 SFHSB3 House
+9 SVGNMT2 Motel room
+9 SVVGMD Safe House
+10 DESHOUS Abandoned AC tower
+10 FDBURG Burger Shot
+10 POLICE2 SFPD HQ
+10 SVGNMT1 Motel room
+10 TRICAS The Four Dragon's
+10 - The Four Dragon's Casino's maintenance room
+10 SVSFMD Safe House
+10 VGHSM3 House
+10 X711S3 24-7
+10 - Zero's No Man's Land
+11 BAR2 Bar
+11 SVLASM Safe House
+12 BARBER3 Barber
+12 CASINO2 Casino Floor
+12 MOROOM Motel room
+12 SVLABIG Safe House
+14 CSEXL Didier Sachs
+14 AIRPOR2 Los Santos International Airport
+14 AIRPORT Francis Intl. Airport
+15 CSCHP Binco
+15 MOTEL1 Jefferson Motel
+15 SFHSM1 House
+15 VGHSS1 House
+15 VGSHM2 House
+15 VGSHM3 House
+15 VGSHS2 House
+16 - Stadium with giant round circular raised platform in middle
+16 TATTOO Tattoo Parlor
+16 X7_11C 24-7
+17 BAR1 Bar
+17 DAMIN Generator Hall
+17 FDDONUT Rusty Brown's
+17 TATTO2 Tattoo Parlor
+17 X7_11D 24-7
+18 ATRIUME Atrium
+18 ATRIUMX Attrium
+18 CLOTHGP Zip
+18 GENWRHS Warehouse
+18 UFOBAR Lil' Probe Inn
+List of Sky Colors by Fireman
+Sky Color	Descriptions
+0 	Blue sky
+1 	White sky fading to black
+2 	Black with yellow circles in the sky
+3 	Same as 1
+4 	Same as 2
+5 	White fading to purple fading to black with yellow circles in the sky
+6 	White fading to black with yellow circles in the sky
+7 	White fading to green fading to black with yellow circles in the sky
+8 	Same as 6
+9 	Same as 6
+10 	Same as 2
+11 	Purple with some strange shadows and with a small seeing range
+12 	Same as 6
+13 	Same as 6
+14 	White fading to ocean blue fading to black with yellow circles in the sky
+15 	Same as 6
+16 	Same as 2
+17 	Night with fog
+18 	Blue fading yellow (Sunrise)
+19 	Blue air with white clouds
+20 	dDark blue air with light blue clouds
+21 	Dark blue air with white clouds
+22 	Orange with white clouds
+23 	Orange fading gray with orange clouds
+24 	Red fading to purple, you can't see anything, not even CJ.
+25 	Dark purple to grey with sun reflection
+27 	Same as 19
+28 	Big sun with blue sky and white clouds
+29 	Blue air with white clouds and a huge sun
+30 	Orange with dark orange clouds
+EX: 2317.82, -1026.75, 1049.21, 0, 1.6, 0.696777, 8, 2317.82, -1024.75, 1049.21, 0, 9, 0, "SVVGMD", 12, 0, 0, 24
+
+
+Pick
+Creates permanent weapon pickups.
+CODE
+Weapon ID, X-coord, Y-coord, Z-coord
+
+List of ID by pdescobar
+ID	Weapon Name	Ammo
+4 	Brass Knuckles	-
+5 	Nightstick	-
+6 	Knife	-
+7 	*Nothing*	-
+8 	*Nothing*	-
+9 	Golf Club	-
+10 	Bat	-
+11 	Shovel	-
+12 	Pool Cue	-
+13 	Katana	-
+14 	Chainsaw	-
+15 	Molotov	8
+16 	Grenades	8
+17 	Satchels	5
+18 	9mm Pistol	30
+19 	Silenced 9mm	10
+20 	Desert Eagle	10
+21 	Shotgun	15
+22 	SPAS Shotgun	10
+23 	Tec 9	60
+24 	Micro SMG	60
+25 	MP5	60
+26 	AK47	80
+27 	M4	80
+28 	Country Rifle	20
+29 	Sniper Rifle	10
+30 	*Nothing*	-
+31 	Flamethrower	100
+32 	Minigun	500
+33 	Large Purple Dildo	-
+34 	Small White Dildo	-
+35 	Large White Vibrator	-
+36 	Small Black Vibrator	-
+37 	Flowers	-
+38 	Cane	-
+39 	Ringbox	-
+40 	Necklace Box	-
+41 	Cellphone	-
+42 	*Nothing*	-
+43 	Teargas	8
+44 	Minigun (Duplicate)	500
+45 	SPAS Shotgun (Duplicate)	10
+46 	Rocket Launcher	4
+47 	Heat Seeking Rocket Launcher	3
+48 	Detonator	-
+49 	Spray can	500
+50 	Fire Extinguisher	500
+51 	Camera	36
+52 	Nightvision Goggles	-
+53 	Infrared Goggles	-
+54 	Jetpack	-
+55 	Parachute	-
+EX: 50, 381.978, -56.9461, 1001.49
+
+
+Jump
+unique stunt jump locations
+CODE
+start_x, start_y, start_z, radius_x, radius_y, radius_z, land_x, land_y, land_z, radius_x, radius_y, radius_z, camera_x, camera_y, camera_z, reward
+
+
+
+Tcyc
+Creates black sky if you enter the zone. Also exists for all towns in countryside. Probably custom weather?
+CODE
+X1, Y1, Z1, X2, Y2, Z2, ?, ?, ?, ?, ?
+
+EX: 93.9904, -333.897, -2.55139, 379.222, 81.7061, 107.449, 800, 0, 0, 100, 0.9
+
+
+Auzo
+Creates an audio if you enter the zone.
+
+Type 1:
+CODE
+Name, ID, Switch, X1, Y1, Z1, X2, Y2, Z2
+
+Name - Name of the zone
+ID - Sound played in this zone
+Switch - Makes it always on or always off. Can be forced using the main.scm
+EX: OTB, 24, 1, 817.121, -2.78276, 1001.62, 838.373, 12.6744, 1009.04
+
+Type 2:
+CODE
+Name, ID, Switch, X, Y, Z, Volume
+
+Name - Name of the zone
+ID - Sound played in this zone
+Switch - Makes it always on or always off. Can be forced using the main.scm
+Volume - The distance the sound will be heard
+EX: LOWRIDE, 13, 0, 1792.2, -1921.04, 12.3925, 75
+List of IDs by pdescobar
+AUZO ID	What sound it plays	Description of sound in the unmodified audio streams
+4** 	Ambience track 9 	St Mark's violin music
+5* 	Ambience track 6 	Beach party bkgd song
+8 	Ambience track 31 	Unused loud hum
+10* 	Ambience track 5 	Awards ceremony music
+12 	Ambience track 34 	Loud hum heard on ships
+13* 	Ambience track 23 	Low Rider Challenge bkgd song
+15 	Ambience track 30 	Static sound heard on military bases
+17 	Ambience track 12 	Casino bkgd medley
+19 	Ambience track 4 	Quiet hum heard in Area 69
+20 	Ambience track 2 	Fan-like clicking heard in Abattoir
+21 	Ambience track 1 	Quiet hum heard in 24-7s
+23 	Ambience track 14 	Loud hum heard in Dam interior
+24 	Ambience track 25 	Racing sounds heard in ITB lobby
+25 	Ambience track 24 	Quiet hum heard in Planning Dept
+26 	Ambience track 20 	Quiet hum heard in safe houses
+28 	Ambience track 13 	Dance Club bkgd medley
+29 	Ambience track 13 	Dance Club bkgd medley
+30 	Favorite Radio Station 	Stream or User Tracks Player
+34 	Ambience track 28 	Pleasure Domes bkgd medley
+36 	Ambience track 21 	Loud hum heard in Jet interior
+37 	Ambience track 10 	Muzak-type bkgd heard in unused diner interiors
+39 	Ambience track 29 	Quiet hum heard in police stations
+41 	Ambience track 35 	Stadium event bkgd medley
+44 	Ambience track 18 	Fast Food Joint bkgd sounds
+48 	Ambience track 3 	Ammunation PA loop
+50 	Ambience track 39 	Quiet hum heard in warehouses
+51 	Ambience track 22 	Very loud hum heard in cargo plane?
+52 	Radio stream CH 	Playback FM
+53 	Radio stream CO 	K-ROSE
+54 	Radio stream CR 	KDST
+55 	Radio stream DS 	Bounce FM
+56 	Radio stream HC 	SFUR
+57 	Radio stream MH 	Radio Los Santos
+58 	Radio stream MR 	Radio X
+59 	Radio stream NJ 	CSR
+60 	Radio stream RE 	K-JAH West
+61 	Radio stream RG 	MasterSounds
+62 	Radio stream TK 	WCTR
+64 	Ambience track 17 	Unused quiet hum
+66 	Ambience track 36 	Strip Club bkgd medley
+67 	Ambience track 37 	Unused bkgd medley
+Notes: Any ID value from 0-70 inclusive not listed above generated no background sound in my tests.
+* - Type two only
+** - Disabled by default, can be reenabled
+
+
+Mult
+?
+
+
+Cars
+Parked vehicles, only used in binary IPLs, can be used in regular IPLs.
+CODE
+X, Y, Z, angle, car id, primary color, secondary color, force spawn, alarm_probability, door_lock_probability, dword (radio?), dword (appearance delay?)
+
+
+
+Occl
+Occlusions (research what this means)
+CODE
+direct mid x, direct mid y, bottom height z, width x, width y, height from bottom height to top, rotation
+
+EX: -2353.98, 916.836, 44.4479, 32.0273, 57.4945, 47.0, 0.0
+Reference
+
+
+NOTE:
+X1, Y1, Z1 = Lower left of area box
+X2, Y2, Z2 = Upper right of area box
+
+- - -
+
+Edit by Steve: Since discrimination is against the forums rules, we can no longer tolerate the ostracization of binary ipl files: wink.gif
+CODE
+4 byte - fourcc, always 'bnry'
+
+4 byte int - number of item instances
+4 byte int - number of unknown 1
+4 byte int - number of unknown 2
+4 byte int - number of unknown 3
+4 byte int - number of parked cars
+4 byte int - number of unknown 4
+
+4 byte int - offset of item instances (should be 76)
+4 byte int - unused size (always 0)
+4 byte int - offset of unknown 1
+4 byte int - unused size (always 0)
+4 byte int - offset of unknown 2
+4 byte int - unused size (always 0)
+4 byte int - offset of unknown 3
+4 byte int - unused size (always 0)
+4 byte int - offset of parked cars
+4 byte int - unused size (always 0)
+4 byte int - offset of unknown 4
+4 byte int - unused size (always 0)
+
+followed by the data arrays...
+
+record sizes:
+ item instances - 40 bytes
+ parked cars    - 48 bytes
+
+record formats:
+ item instances - pos (x, y, z); rot quat (x, y, z, w); ObjectID; InteriorID; Flags
+ parked cars - pos (x, y, z); rot angle; ObjectID; 7 unknown DWORDs
+ (coords are 4b floats; IDs and Flags are 4b DWORDs)
+
+
+And a printout (all bin ipl entries (inst) in text format):
+http://people.freenet.de/steve-m/binipl.rar
+
+- - -
+
+Thanks to y'all in this topic for helping me.
+
+All information can easily be updated here.
+Useful tool to help you here 

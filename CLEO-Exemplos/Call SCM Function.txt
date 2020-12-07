@@ -1,0 +1,43 @@
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'ROMERO'
+
+:ROMERO_11
+0001: wait 0 ms
+00D6: if
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @ROMERO_11
+00D6: if
+0AB0:   key_pressed 9     // -------TAB
+004D: jump_if_false @ROMERO_11
+0247: load_model #ROMERO    //---model
+
+:ROMERO_51
+0001: wait 0 ms
+00D6: if and
+0248:   model #ROMERO available //---model
+004D: jump_if_false @ROMERO_51
+0AA5: call 4225105 1 pop 1 442  // Addresses :CreateCar  //cria um Romero
+0001: wait 1000 ms
+0002: jump @ROMERO_11 
+
+
+==================================================================
+
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'ROMERO'
+
+:ROMERO_11
+0001: wait 0 ms
+00D6: if
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @ROMERO_11
+00D6: if
+0AB0:   key_pressed 9     // -------TAB
+004D: jump_if_false @ROMERO_11
+0AA5: call 0x004385B0  1 pop 1 0  // Addresses :ARma nivel 1
+0001: wait 1000 ms
+0002: jump @ROMERO_11 

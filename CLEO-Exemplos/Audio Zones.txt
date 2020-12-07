@@ -1,0 +1,70 @@
+Auzo
+Creates an audio if you enter the zone.
+
+Type 1:
+CODE
+Name, ID, Switch, X1, Y1, Z1, X2, Y2, Z2
+
+Name - Name of the zone
+ID - Sound played in this zone
+Switch - Makes it always on or always off. Can be forced using the main.scm
+EX: OTB, 24, 1, 817.121, -2.78276, 1001.62, 838.373, 12.6744, 1009.04
+
+Type 2:
+CODE
+Name, ID, Switch, X, Y, Z, Volume
+
+Name - Name of the zone
+ID - Sound played in this zone
+Switch - Makes it always on or always off. Can be forced using the main.scm
+Volume - The distance the sound will be heard
+EX: LOWRIDE, 13, 0, 1792.2, -1921.04, 12.3925, 75
+List of IDs by pdescobar
+
+AUZO ID	What sound it plays	Description of sound in the unmodified audio streams
+4** 	Ambience track 9 	St Mark's violin music
+5* 	Ambience track 6 	Beach party bkgd song
+8 	Ambience track 31 	Unused loud hum
+10* 	Ambience track 5 	Awards ceremony music
+12 	Ambience track 34 	Loud hum heard on ships
+13* 	Ambience track 23 	Low Rider Challenge bkgd song
+15 	Ambience track 30 	Static sound heard on military bases
+17 	Ambience track 12 	Casino bkgd medley
+19 	Ambience track 4 	Quiet hum heard in Area 69
+20 	Ambience track 2 	Fan-like clicking heard in Abattoir
+21 	Ambience track 1 	Quiet hum heard in 24-7s
+23 	Ambience track 14 	Loud hum heard in Dam interior
+24 	Ambience track 25 	Racing sounds heard in ITB lobby
+25 	Ambience track 24 	Quiet hum heard in Planning Dept
+26 	Ambience track 20 	Quiet hum heard in safe houses
+28 	Ambience track 13 	Dance Club bkgd medley
+29 	Ambience track 13 	Dance Club bkgd medley
+30 	Favorite Radio Station 	Stream or User Tracks Player
+34 	Ambience track 28 	Pleasure Domes bkgd medley
+36 	Ambience track 21 	Loud hum heard in Jet interior
+37 	Ambience track 10 	Muzak-type bkgd heard in unused diner interiors
+39 	Ambience track 29 	Quiet hum heard in police stations
+41 	Ambience track 35 	Stadium event bkgd medley
+44 	Ambience track 18 	Fast Food Joint bkgd sounds
+48 	Ambience track 3 	Ammunation PA loop
+50 	Ambience track 39 	Quiet hum heard in warehouses
+51 	Ambience track 22 	Very loud hum heard in cargo plane?
+52 	Radio stream CH 	Playback FM
+53 	Radio stream CO 	K-ROSE
+54 	Radio stream CR 	KDST
+55 	Radio stream DS 	Bounce FM
+56 	Radio stream HC 	SFUR
+57 	Radio stream MH 	Radio Los Santos
+58 	Radio stream MR 	Radio X
+59 	Radio stream NJ 	CSR
+60 	Radio stream RE 	K-JAH West
+61 	Radio stream RG 	MasterSounds
+62 	Radio stream TK 	WCTR
+64 	Ambience track 17 	Unused quiet hum
+66 	Ambience track 36 	Strip Club bkgd medley
+67 	Ambience track 37 	Unused bkgd medley
+
+
+Notes: Any ID value from 0-70 inclusive not listed above generated no background sound in my tests.
+* - Type two only
+** - Disabled by default, can be reenabled

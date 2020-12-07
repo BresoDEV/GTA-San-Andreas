@@ -1,0 +1,16 @@
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'CAMERA' 
+
+:CAMERA_11
+0001: wait 0 ms 
+00D6: if 
+015F: set_camera_position [coordenadas pra camera fica posicionada] rotation 0.0 0.0 0.0   [esse rotation é a angulação da câmera]
+0160: set_camera_point_at [cordenadas pra camera focar] mode 2
+0001: wait 5000 ms 
+00D6: if 
+015A: restore_camera 
+004E: end_thread 

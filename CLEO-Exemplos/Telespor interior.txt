@@ -1,0 +1,27 @@
+{$CLEO .cs}
+:MODLSUB_1
+03A4: name_thread 'TELEPORT'
+
+:DUDU1
+0001: wait  0 ms
+00D6: if  0
+0256:   player $PLAYER_CHAR defined
+004D: jump_if_false @DUDU1
+00D6: if  0
+00FF:   actor $PLAYER_ACTOR  1 (in-sphere)near_point_on_foot [coordenadas entrada] radius  1.0  1.0  1.0
+004D: jump_if_false @DUDU1
+016A: fade 0 time 1500
+0050: jump @DUDU2
+
+:DUDU2
+0001: wait 2000 ms
+if
+04BB: select_interior 0 // numero que o interior corresponde, vc precisa ir testando até dar certo
+0860: link_actor $PLAYER_ACTOR to_interior 0  // numero que o interior corresponde, vc precisa por o mesmo numero de antes
+04E4: unknown_refresh_game_renderer_at [coordenadas saída]
+03CB: set_rendering_origin_at [coordenadas saída]
+00A1: put_actor $PLAYER_ACTOR at [coordenadas saída]
+0001: wait 2000 ms
+if
+016A: fade 1 time 1500
+jump @DUDU1

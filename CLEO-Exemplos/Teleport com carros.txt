@@ -1,0 +1,35 @@
+
+
+{$CLEO .cs}
+:MODLSUB_1
+03A4: name_thread 'TELEPORT'
+
+:DUDU1
+0001: wait  0 ms
+00D6: if  0
+0256:   player $PLAYER_CHAR defined
+
+004D: jump_if_false @DUDU1
+
+00D6: if  0
+0100:   actor $PLAYER_ACTOR in_sphere (COORDENADA ENTRADA) radius 4.0 4.0 4.0 sphere 1 in_car 
+004D: jump_if_false @DUDU1
+00DF:   actor $PLAYER_ACTOR driving 
+03C0: $CARRO = actor $PLAYER_ACTOR car 
+004D: jump_if_false @DUDU1
+016A: fade 0 time 1500
+0050: jump @DUDU2
+
+:DUDU2
+0001: wait 2000 ms
+if
+04E4: unknown_refresh_game_renderer_at (COORDENADA SAIDA)
+03CB: set_rendering_origin_at (COORDENADA SAIDA)
+00AB: put_car $CARRO at (COORDENADA SAIDA)
+072A: put_actor $PLAYER_ACTOR into_car $CARRO driverseat 
+
+
+0001: wait 2000 ms
+if
+016A: fade 1 time 1500
+jump @DUDU1

@@ -1,0 +1,89 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'MENU_SIMPLES' 
+
+:NONAME_4
+0001: wait 0 ms 
+if
+0AB0:  key_pressed 8
+jf @NONAME_4
+0512:  show_permanent_text_box 'CLOTHA'
+01B4: set_player $PLAYER_CHAR can_move 0
+08D4: $MENU = create_panel_with_title 'TATTO' position 29.0 145.0 width 220.0 columns 1 interactive 1 background 1 alignment 1
+08DB:  set_panel $MENU column 0 header 'DUMMY' data 'NRG500' 'MONSTER' 'INFERNU' 'ADMIRAL' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY' 'DUMMY'
+08D7: $ESCOLHA = panel $MENU active_row
+jump @ESCOLHAS
+
+:ESCOLHAS  
+0001: wait 0 ms 
+00D6: if 
+00E1:   player 0 pressed_key 15 
+004D: jump_if_false @2  
+08DA: remove_panel $MENU 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+03F0: enable_text_draw 0 
+03E6: remove_text_box 
+jump @NONAME_4        
+
+:2    
+00D6: if 
+00E1:   player 0 pressed_key 16 
+004D: jump_if_false @ESCOLHAS    
+03E6: remove_text_box 
+08D7: $ESCOLHA = panel $MENU active_row 
+0008: $ESCOLHA += 1 
+00D6: if 
+0038:   $ESCOLHA == 1 
+004D: jump_if_false @3 
+00BC: show_text_highpriority GXT 'NRG500' time 4000 flag 1     
+08DA: remove_panel $MENU 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+03F0: enable_text_draw 0 
+03E6: remove_text_box 
+jump @NONAME_4  
+ 
+:3      
+00D6: if 
+0038:   $ESCOLHA == 2 
+004D: jump_if_false @4 
+00BC: show_text_highpriority GXT 'MONSTER' time 4000 flag 1      
+08DA: remove_panel $MENU 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+03F0: enable_text_draw 0
+03E6: remove_text_box  
+jump @NONAME_4  
+
+:4      
+00D6: if 
+0038:   $ESCOLHA == 3 
+004D: jump_if_false @5 
+00BC: show_text_highpriority GXT 'INFERNU' time 4000 flag 1      
+08DA: remove_panel $MENU 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+03F0: enable_text_draw 0
+03E6: remove_text_box  
+jump @NONAME_4  
+
+:5      
+00D6: if 
+0038:   $ESCOLHA == 4 
+004D: jump_if_false @ESCOLHAS 
+00BC: show_text_highpriority GXT 'ADMIRAL' time 4000 flag 1      
+08DA: remove_panel $MENU 
+01B4: set_player $PLAYER_CHAR can_move 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone 0 
+03F0: enable_text_draw 0
+03E6: remove_text_box  
+jump @NONAME_4  
+
+
+
+

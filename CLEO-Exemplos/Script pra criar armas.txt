@@ -1,0 +1,14 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+0000: NOP 
+
+:NONAME_2
+0001: wait 250 ms 
+00D6: if 
+032B: $DUDU = create_weapon_pickup #CAMERA group 15 ammo 999 at -1631.554 -2235.73 31.4766 
+032B: $DUDU = create_weapon_pickup #MINIGUN group 15 ammo 999 at -1642.42 -2258.5 32.2 
+0002: jump @NONAME_2 

@@ -1,0 +1,10 @@
+0AAB:   file_exists "cleo\Breso.ini" 
+
+0AF0: 3@ = get_int_from_ini_file "cleo\Breso.ini" section "Main" key "DisableReplayF1&F3" 
+
+ 0AF4: 3@v = read_string_from_ini_file "cleo\Breso.ini" section "AddVehicle" key "5-Name" 
+ 0AF2: 3@ = get_float_from_ini_file "cleo\Breso.ini" section "AddVehicle" key "5-Name" 
+ 
+ 0AF5: write_string "" to_ini_file "cleo\Breso.ini" section "AddVehicle" key "5-Name" 
+ 0AF3: write_float 10.0 to_ini_file "cleo\Breso.ini" section "AddVehicle" key "5-Name" 
+ 0AF1: write_int 123 to_ini_file "cleo\Breso.ini" section "Main" key "ViewInfoFont" 

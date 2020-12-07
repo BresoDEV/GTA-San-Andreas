@@ -1,0 +1,137 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'JPTABL' 
+0006: 1@ = 0 
+0793: save_player_clothes 
+
+:JPTABL_18
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @JPTABL_18 
+03F0: enable_text_draw 1 
+045A: draw_text_1number 400.0 50.0 GXT 'NUMBER' number 1@  // ~1~
+00D6: if 
+0AB0:   key_pressed 110 
+004D: jump_if_false @JPTABL_18 
+0871: init_jump_table 1@ total_jumps 6 default_jump 0 @JPTABL_274 jumps 0 @0 1 @1 2 @2 3 @3 4 @4 5 @5 6 @6
+
+:JPTABL_274
+00BA: show_text_styled GXT 'FEM_OFF' time 1000 style 4  // OFF
+0794: restore_player_clothes 
+070D: rebuild_player $PLAYER_CHAR 
+0001: wait 1000 ms 
+0006: 1@ = 0
+0002: jump @JPTABL_18
+
+:0
+087B: set_player $PLAYER_CHAR clothes_texture "GIMPLEG" model "GIMPLEG" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+:1
+087B: set_player $PLAYER_CHAR clothes_texture "VALET" model "VALET" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+
+:2
+087B: set_player $PLAYER_CHAR clothes_texture "COUNTRYTR" model "COUNTRYTR" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+:3
+087B: set_player $PLAYER_CHAR clothes_texture "CROUPIER" model "VALET" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+:4
+087B: set_player $PLAYER_CHAR clothes_texture "POLICETR" model "POLICETR" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+:5
+087B: set_player $PLAYER_CHAR clothes_texture "BALACLAVA" model "BALACLAVA" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+:6 
+087B: set_player $PLAYER_CHAR clothes_texture "PIMPTR" model "PIMPTR" body_part 17 
+070D: rebuild_player $PLAYER_CHAR 
+jump @JPTABL_555
+
+
+:JPTABL_555
+000A: 1@ += 1 
+0002: jump @JPTABL_18 
+
+
+
+
+
+============================================================================================================
+
+
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'JPTABL' 
+0006: 1@ = 0 
+
+:JPTABL_18
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @JPTABL_18 
+00D6: if 
+0AB0:   key_pressed 110 
+004D: jump_if_false @JPTABL_18 
+0871: init_jump_table 1@ total_jumps 6 default_jump 0 @JPTABL_274 jumps 0 @0 1 @1 2 @2 3 @3 4 @4 5 @5 6 @6
+
+:JPTABL_274
+00BA: show_text_styled GXT 'FEM_OFF' time 1000 style 4  // OFF 
+0001: wait 1000 ms 
+0006: 1@ = 0
+0002: jump @JPTABL_18
+
+:0
+0AA5: call 4225105 1 pop 1 #SAVANNA   
+jump @JPTABL_555
+
+:1
+0AA5: call 4225105 1 pop 1 #BLADE  
+jump @JPTABL_555
+
+
+:2
+0AA5: call 4225105 1 pop 1 #NRG500  
+jump @JPTABL_555
+
+:3
+0AA5: call 4225105 1 pop 1 #BMX  
+jump @JPTABL_555
+
+:4
+0AA5: call 4225105 1 pop 1 #MTBIKE  
+jump @JPTABL_555
+
+:5
+0AA5: call 4225105 1 pop 1 #BANSHEE  
+jump @JPTABL_555
+
+:6 
+0AA5: call 4225105 1 pop 1 #BULLET  
+jump @JPTABL_555
+
+
+:JPTABL_555
+000A: 1@ += 1 
+0002: jump @JPTABL_18 
+

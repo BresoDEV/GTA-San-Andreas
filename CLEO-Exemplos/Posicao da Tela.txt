@@ -1,0 +1,72 @@
+
+
+//ABRE COM A LETRA M
+//POSICIONA COM AS SETAS
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'ZAD' 
+
+1@ = 100.0
+2@ = 40.0
+
+:ZAD_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @ZAD_11 
+if
+0AB0:  key_pressed 77 
+004D: jump_if_false @cu 
+03F0: enable_text_draw 1 
+0092: 17@ = float_to_integer 1@ // local, local 
+045A: text_draw_1number  1@  2@ 'NUMBER' 17@  
+03F0: set_text_draw_enabled 0
+jump @cu
+
+:cu
+if
+0AB0:  key_pressed 39 //aumenta 
+004D: jump_if_false @cu2
+wait 1
+1@ += 1.0
+jump @ZAD_11
+
+:cu2
+if
+0AB0:  key_pressed 37 //diminue 
+004D: jump_if_false @cu3
+wait 1
+1@ -= 1.0
+jump @ZAD_11
+
+:cu3
+if
+0AB0:  key_pressed 38 //cima 
+004D: jump_if_false @cu4
+wait 1
+2@ += 1.0
+jump @ZAD_11
+
+:cu4
+if
+0AB0:  key_pressed 40 //diminue 
+004D: jump_if_false @ZAD_11
+wait 1
+2@ -= 1.0
+jump @ZAD_11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

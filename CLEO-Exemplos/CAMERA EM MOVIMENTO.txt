@@ -1,0 +1,24 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'BOMB_EDUARDO' 
+
+:BOMB_EDUARDO_19
+0001: wait 0 ms 
+00D6: if and
+0038:   $ONMISSION == 0 
+0AB0:   key_pressed 9 
+004D: jump_if_false @BOMB_EDUARDO_19 
+0001: wait 0 ms  
+015F: set_camera_position [onde fica a camera no começo] rotation 0.0 0.0 0.0 
+0160: set_camera_point_at [onde a camera foca no começo] mode 2 
+0001: wait 3000 ms 
+0460: set_camera_transverse_delay 0.0 time 30000      //comando que faz com que a camera se mexa
+015F: set_camera_position [camera se posiciona depois] rotation 0.0 0.0 0.0 
+0160: set_camera_point_at [camera foca depois] mode 1 
+0001: wait 27000 ms 
+015A: restore_camera 
+004E: end_thread 

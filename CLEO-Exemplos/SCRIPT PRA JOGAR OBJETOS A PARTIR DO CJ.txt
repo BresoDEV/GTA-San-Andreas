@@ -1,0 +1,309 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+if
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0AB0:  key_pressed 8
+004D: jump_if_false @DUDU_11 
+0247: load_model 1598
+
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if 
+0248:   model 1598 available 
+004D: jump_if_false @DUDU_188 
+04C4: store_coords_to $TAGX $TAGY $TAGZ from_actor $PLAYER_ACTOR with_offset 0.0 1.0 0.0 
+0107: $BOLA = create_object 1598 at $TAGX $TAGY $TAGZ
+0392: make_object $BOLA moveable 1 
+08D2: object $BOLA scale_model 0.3 
+04D9: object $BOLA set_scripted_collision_check 1 
+0382: set_object $BOLA collision_detection 1 
+07F7: set_object $BOLA indestructible 1 
+0172: $10 = actor $PLAYER_ACTOR Z_angle 
+070B: set_actor $PLAYER_ACTOR onbone_attached_object_operation 1 
+0819: $12 = actor $PLAYER_ACTOR distance_from_ground 
+0007: $13 = 60.1           //<<<<<<<<<<<<<===============   distância
+02F6: $23 = sine $10 // (float) 
+02F7: $28 = cosine $10 // (float) 
+006B: $23 *= $13 // (float) 
+006B: $28 *= $13 // (float) 
+0013: $23 *= -1.0 
+000B: $12 += 10.0        //<<<<<<<<<<<<<===============     Altura que ela é arremessada
+0381: throw_object $BOLA velocity_in_direction $23 $28 $12 
+0001: wait 0 ms 
+0249: release_model 1598
+ 0002: jump @DUDU_11 
+
+
+
+
+
+
+
+########################################################################################################
+
+
+
+
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+if
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if and
+02D8:   actor $PLAYER_ACTOR current_weapon == 0 
+0AB0:  key_pressed 96
+004D: jump_if_false @DUDU_11 
+0247: load_model 1598
+
+
+:DUDU_188
+0001: wait 0 ms 
+00D6: if 
+0248:   model 1598 available 
+004D: jump_if_false @DUDU_188 
+04C4: store_coords_to $TAGX $TAGY $TAGZ from_actor $PLAYER_ACTOR with_offset 0.0 4.0 0.0 
+0107: $BOLA = create_object 1598 at $TAGX $TAGY $TAGZ
+ 0392: make_object $BOLA moveable 1 
+08D2: object $BOLA scale_model 1.0 
+04D9: object $BOLA set_scripted_collision_check 1 
+0382: set_object $BOLA collision_detection 1 
+07F7: set_object $BOLA indestructible 1 
+0172: $10 = actor $PLAYER_ACTOR Z_angle 
+070B: set_actor $PLAYER_ACTOR onbone_attached_object_operation 1 
+0819: $12 = actor $PLAYER_ACTOR distance_from_ground 
+0007: $13 = 100.1           //<<<<<<<<<<<<<===============     FORÇA
+02F6: $23 = sine $10 // (float) 
+02F7: $28 = cosine $10 // (float) 
+006B: $23 *= $13 // (float) 
+006B: $28 *= $13 // (float) 
+0013: $23 *= -1.0 
+000B: $12 += 6.0        //<<<<<<<<<<<<<===============     Altura que ela é arremessada
+0381: throw_object $BOLA velocity_in_direction $23 $28 $12 
+jump @BATE_1
+
+:BATE_1
+0400: store_coords_to 1@ 2@ 3@ from_object $BOLA with_offset 0.0 0.0 0.0
+04D5: create_corona_at 1@ 2@ 3@ radius 1.5 type 1 flare 1 RGB 150  0  255
+095C: create_smoke_at 1@ 2@ 3@ velocity 0.0 0.0 0.0 RGBA 1.0 1.0 1.0 1.0 size 0.5 last_factor 0.10
+jump @BATE
+
+:BATE
+wait 0
+if
+04DA:   has_object $BOLA collided
+jf @BATE_1
+0400: store_coords_to 1@ 2@ 3@ from_object $BOLA with_offset 0.0 0.0 -2.0
+020C: create_explosion_with_radius 10 at 1@ 2@ 3@
+020C: create_explosion_with_radius 15 at 1@ 2@ 3@ 
+0108: destroy_object $BOLA 
+0001: wait 0 ms 
+0249: release_model 1598
+ 0002: jump @DUDU_11 
+
+
+
+
+
+
+###################################################################################################
+
+=============== OBjETOS DEVAGAR E EM LINHA RETA =============== 
+
+{$CLEO .cs}
+:Objectthrow_0
+03A4: name_thread 'OTHROW'
+//1598, beachball
+
+:Objectthrow_1
+wait  0 ms
+if
+0256: player $PLAYER_CHAR defined
+004D: jump_if_false @Objectthrow_1
+if
+0AB0:   key_pressed 2//-----------------------------press right mouse button
+004D: jump_if_false @Objectthrow_1
+0247: request_model 1598
+03CF: load_wav 14407 as 1 // 18407 = Sound-ID
+
+:Objectthrow_3
+wait  0 ms
+if
+0248:   model 1598  available
+03D0:   wav 1 loaded
+004D: jump_if_false @Objectthrow_3
+04C4: create_coordinate 11@ 12@ 13@ from_actor $PLAYER_ACTOR offset  0.0 2.0  0.5
+0107: 1@ = create_object 1598  at  11@ 12@ 13@
+0750: set_object 1@ visibility 1
+04D9: object 1@ set_scripted_collision_check 1
+0382: set_object 1@ collision_detection 1
+0906: set_object 1@ mass_to 30000.0 // float
+0908: set_object 1@ turn_mass_to 30000.0 // float
+0392: make_object 1@ moveable 1 
+08D2: object 1@ scale_model 0.1 
+/////////////////////////////////  
+/////////////////////////////////  
+// ============  COMANDOS DE ATIRAR O OBJETO  ================
+0172: 19@ = actor $PLAYER_ACTOR Z_angle
+02F6: 15@ = sine 19@ // (float)
+02F7: 16@ = cosine 19@ // (float)
+16@ *= 50.0     //<<<<<<<<< velocidade os dois valores iguais
+15@ *= 50.0      //<<<<<<<<< velocidade os dois valores iguais
+0819: 18@ = actor $PLAYER_ACTOR distance_from_ground
+15@ *= -1.0
+03D1: play_wav 1
+jump @1
+
+:1
+0381: throw_object 1@ velocity_in_direction 15@ 16@ 18@  //<<<<<<<<< Esse upcode fica aqui pra ele ficar sempre repetindo a força na direção
+01BB: store_object 1@ position_to $SSS $KKK $TTT
+0400: store_coords_to $SSS $KKK $TTT from_object 1@ with_offset 0.0 0.0 0.0 
+04D5: create_corona_at $SSS $KKK $TTT radius 0.5 type 3 flare 1 RGB 0 255 0  
+09E5: create_flash_light_at $SSS $KKK $TTT RGB_mask 0 255 0 radius 200.0 
+jump @Objectthrow_5 
+
+:Objectthrow_5
+wait  0 ms
+if
+04DA:   has_object 1@ collided
+004D: jump_if_false @1
+jump @Objectthrow_13
+
+
+:Objectthrow_13
+040D: unload_wav 1
+0108: destroy_object 1@
+0249: release_model 1598
+0002: jump @Objectthrow_1
+
+
+
+
+
+
+
+
+
+
+##########################################################################################################
+
+
+Jogar com uma arma e com mira
+Comando: K aparesce a arma na mão e atira com o Mouse..desativa no K tbm
+
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+0A95: enable_thread_saving 
+
+:NONAME_2
+0001: wait 0 ms 
+00D6: if and
+0256:   player $PLAYER_CHAR defined 
+80DF:   not actor $PLAYER_ACTOR driving 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @NONAME_2 
+00D6: if and
+0AB0:   key_pressed 75 
+03EE:   player $PLAYER_CHAR controllable 
+004D: jump_if_false @NONAME_2 
+0247: load_model #SAWNOFF 
+0247: load_model 2976 
+0247: load_model 1598
+038B: load_requested_models 
+jump @1
+
+:1
+wait 0
+if and
+0248:   model #SAWNOFF available 
+0248:   model 2976 available
+0248:   model 1598 available 
+jf @1
+wait 1000
+0881: set_player $PLAYER_CHAR able_to_shoot_weapons 0 
+01B2: give_actor $PLAYER_ACTOR weapon 26 ammo 999999 // Load the weapon model before using this 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 26 
+04C4: store_coords_to 7@ 8@ 9@ from_actor $PLAYER_ACTOR with_offset 0.0 2.0 0.0 
+0107: 16@ = create_object #SAWNOFF at 7@ 8@ 9@ 
+0382: set_object 16@ collision_detection 0 
+070A: AS_actor $PLAYER_ACTOR attach_to_object 16@ offset 0.0 0.0 0.0 on_bone 6 16 perform_animation "NULL" IFP_file "NULL" time 1 
+jump @2
+
+:2
+wait 0 
+if and
+00E1:   player 0 pressed_key 17
+02D8:   actor $PLAYER_ACTOR current_weapon == 26 
+
+jf @22
+0400: store_coords_to 1@ 2@ 3@ from_object 16@ with_offset 0.0 0.0 0.0 
+0107: $BOLA = create_object 1598 at 1@ 2@ 3@
+066D: $FIRE = attach_particle "flame" to_object $BOLA with_offset 0.0 0.0 0.0 flag 1 
+
+0392: make_object $BOLA moveable 1 
+08D2: object $BOLA scale_model 0.3 
+04D9: object $BOLA set_scripted_collision_check 1 
+0382: set_object $BOLA collision_detection 1 
+07F7: set_object $BOLA indestructible 1 
+0176: $10 = object 16@ Z_angle 
+$10 -= 80.0
+0819: $12 = actor $PLAYER_ACTOR distance_from_ground 
+0007: $13 = 80.1 
+02F6: $23 = sine $10 // (float) 
+02F7: $28 = cosine $10 // (float) 
+006B: $23 *= $13 // (float) 
+006B: $28 *= $13 // (float) 
+0013: $23 *= -1.0 
+0381: throw_object $BOLA velocity_in_direction $23 $28 $12 
+jump @3
+
+:3
+wait 0
+if
+04DA:   has_object $BOLA collided 
+jf @3
+0400: store_coords_to $SSS $KKK $TTT from_object $BOLA with_offset 0.0 0.0 -2.0 
+020C: create_explosion_with_radius 11 at $SSS $KKK $TTT  
+0650: destroy_particle $FIRE 
+0108: destroy_object $BOLA  
+jump @2
+
+:22
+wait 0
+if
+0AB0:   key_pressed 75  
+004D: jump_if_false @2
+jump @DESTRIUR
+
+
+
+
+:DESTRIUR
+0108: destroy_object 16@  
+0249: release_model #SAWNOFF 
+0249: release_model 2976 
+0249: release_model 1598
+wait 1000
+JUMP @NONAME_2
+
+

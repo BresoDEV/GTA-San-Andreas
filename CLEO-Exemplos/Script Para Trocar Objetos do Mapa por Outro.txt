@@ -1,0 +1,41 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'TELEPORT' 
+
+:TELEPORT_19
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @TELEPORT_19 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2494.27 -1696.21 17.0547 radius 180.0 180.0 180.0 
+004D: jump_if_false @TELEPORT_19 
+0247: load_model 3598
+
+:CASA_01
+0001: wait 0 ms 
+00D6: if 
+0248:   model 3598 available 
+004D: jump_if_false @CASA_01
+03B6: replace_model_at 2494.27 -1696.21 17.0547 radius 20.0 from 17697 to 3598
+0001: wait 10000 ms 
+0249: release_model 3598 
+
+:DUDU_763
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 2494.27 -1696.21 17.0547 radius 180.0 180.0 180.0 
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+00D6: if 
+03B6: replace_model_at 2494.27 -1696.21 17.0547 radius 20.0 from 3598 to 17697
+004D: jump_if_false @DUDU_848 
+0001: wait 0 ms 
+0002: jump @DUDU_763 
+
+:DUDU_848 
+0002: jump @TELEPORT_19 

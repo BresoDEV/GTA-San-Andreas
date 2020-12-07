@@ -1,0 +1,129 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'DUDU' 
+
+:DUDU_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0038:   $ONMISSION == 0 
+004D: jump_if_false @DUDU_11 
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @DUDU_11 
+00D6: if 
+00FF:   actor $PLAYER_ACTOR sphere 1 in_sphere -460.1461 1383.127 15.9924 radius 1.0 1.0 1.0 on_foot 
+004D: jump_if_false @DUDU_11 
+0247: load_model #BFINJECT 
+0247: load_model #FAM1 
+0247: load_model #BALLAS1 
+0247: load_model #AK47 
+
+:DUDU_139
+0001: wait 0 ms 
+00D6: if and
+0248:   model #BFINJECT available 
+0248:   model #FAM1 available 
+0248:   model #BALLAS1 available 
+0248:   model #AK47 available 
+004D: jump_if_false @DUDU_139 
+00BA: show_text_styled GXT 'MISS_1' time 5000 style 2 
+00A5: 1@ = create_car #BFINJECT at -442.5349 1373.8295 14.7834
+0175: set_car 1@ Z_angle_to 183.1117
+081D: set_car 1@ engine_operation 1
+01EB: set_traffic_density_multiplier_to 0.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+01F0: set_max_wanted_level_to 0 
+01F7: set_player $PLAYER_CHAR ignored_by_cops 1 
+0001: wait 1000 ms 
+00D6: if and
+0129: 2@ = create_actor_pedtype 4 model #FAM1 in_car 1@ driverseat 
+01B2: give_actor 2@ weapon 30 ammo 60 // Load the weapon model before using this 
+01B2: give_actor $PLAYER_ACTOR weapon 30 ammo 30000 // Load the weapon model before using this 
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 30 
+00A1: put_actor $PLAYER_ACTOR at -453.132 1374.2218 14.6646
+0001: wait 0 ms 
+00D6: if and
+015F: set_camera_position -444.0644 1359.8085 19.4386 rotation 0.0 0.0 0.0 
+0160: set_camera_point_at -441.2449 1374.6699 14.7834 mode 2 
+0001: wait 250 ms 
+07CD: AS_actor $PLAYER_ACTOR walk_to -447.3884 1374.12 14.8814 stop_with_angle 267.4226 within_radius 1.0
+0001: wait 6000 ms 
+00BC: show_text_highpriority GXT 'MISS_2' time 3000 flag 1 
+0430: put_actor $PLAYER_ACTOR into_car 1@ passenger_seat 0 
+0001: wait 2000 ms 
+02EB: restore_camera_with_jumpcut 
+00A7: car 1@ drive_to 25.8655 1514.809 49.783 
+00AD: set_car 1@ max_speed_to 40.0 
+00A8: set_car 1@ to_psycho_driver 
+
+:DUDU_325
+0001: wait 0 ms 
+00D6: if 
+00FE:   actor $PLAYER_ACTOR sphere 0 in_sphere 47.0248 1521.068 50.4607 radius 30.0 30.0 20.0 
+004D: jump_if_false @DUDU_325 
+0001: wait 0 ms 
+00BC: show_text_highpriority GXT 'MISS_3' time 3000 flag 1 
+068B: set_car 1@ all_disembark 
+009A: 3@ = create_actor_pedtype 7 model #BALLAS1 at 47.0248 1521.068 50.4607 
+0223: set_actor 3@ health_to 250 
+0173: set_actor 3@ Z_angle_to 120.8508 
+009A: 4@ = create_actor_pedtype 7 model #BALLAS1 at 44.6328 1523.472 50.3942 
+0223: set_actor 4@ health_to 250 
+0173: set_actor 4@ Z_angle_to 120.8508 
+01B2: give_actor 3@ weapon 30 ammo 60 // Load the weapon model before using this 
+01B2: give_actor 4@ weapon 30 ammo 60 // Load the weapon model before using this 
+02E2: set_actor 3@ weapon_accuracy_to 100 
+02E2: set_actor 4@ weapon_accuracy_to 100 
+05E2: AS_actor 3@ kill_actor $PLAYER_ACTOR 
+05E2: AS_actor 4@ kill_actor $PLAYER_ACTOR 
+05E2: AS_actor 2@ kill_actor 4@ 
+0187: $INI1 = create_marker_above_actor 3@ 
+0187: $INI2 = create_marker_above_actor 4@ 
+0002: jump @DUDU_549 
+
+:DUDU_549
+0001: wait 500 ms 
+00D6: if 
+0118:   actor 3@ dead 
+004D: jump_if_false @DUDU_549 
+0002: jump @DUDU_577 
+
+:DUDU_577
+0001: wait 500 ms 
+00D6: if 
+0118:   actor 4@ dead 
+004D: jump_if_false @DUDU_577 
+0002: jump @DUDU_605 
+
+:DUDU_605
+0001: wait 0 ms 
+00D6: if 
+0249: release_model #FAM1 
+0249: release_model #BALLAS1 
+0249: release_model #BFINJECT 
+0249: release_model #AK47 
+0001: wait 500 ms 
+01E3: show_text_1number_styled GXT 'M_PASSD' number 0 time 5000 style 1  // MISSION PASSED!
+03E6: remove_text_box 
+00BC: show_text_highpriority GXT 'MISS_4' time 3000 flag 1 
+0109: player $PLAYER_CHAR money += 30000 
+0998: add_respect 100 
+0394: play_music 1 
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+00A6: destroy_car 1@ 
+009B: destroy_actor 2@ 
+009B: destroy_actor 3@ 
+009B: destroy_actor 4@ 
+01F7: set_player $PLAYER_CHAR ignored_by_cops 0 
+01F0: set_max_wanted_level_to 6 
+0002: jump @DUDU_11 

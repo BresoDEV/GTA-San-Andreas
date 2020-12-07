@@ -1,0 +1,35 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'OTHROW' 
+
+:OTHROW_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @OTHROW_11 
+00D6: if 
+0AB0:   key_pressed 8 
+004D: jump_if_false @OTHROW_11 
+0247: load_model 3054 
+
+:OTHROW_51
+0001: wait 0 ms 
+00D6: if 
+0248:   model 3054 available 
+004D: jump_if_false @OTHROW_51 
+04C4: store_coords_to 11@ 12@ 13@ from_actor $PLAYER_ACTOR with_offset 0.0 5.0 0.0 
+0107: 1@ = create_object 3054 at 11@ 12@ 13@ 
+0906: set_object 1@ mass_to 300.0 // float 
+0908: set_object 1@ turn_mass_to 300 // float 
+04D9: object 1@ set_scripted_collision_check 1 
+0382: set_object 1@ collision_detection 1 
+0001: wait 2000 ms 
+0392: make_object 1@ moveable 1 
+0381: throw_object 1@ velocity_in_direction 0.0 20.0 15.0 
+0001: wait 5000 ms 
+0249: release_model 3054 
+0002: jump @OTHROW_11 

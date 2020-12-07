@@ -1,0 +1,10 @@
+
+00AF: set_car 1@ driver_behaviour_to  2//-- 2 as last param let chase the player
+
+
+
+four valid settings for opcode 00AF:
+1 - follow road, drive back if way is blocked
+2 - kill the player
+4 - drive to player and stop
+8 - ignore road-paths

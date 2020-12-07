@@ -1,0 +1,21 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'VKARR' 
+
+:VKARR_11
+0001: wait 50 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined  
+004D: jump_if_false @VKARR_11 
+0AAC: 6@ = load_mp3 "CLEO\SOUND\TESTE.MP3"
+if
+0AB0:   key_pressed 16  
+004D: jump_if_false @VKARR_11 
+0AAD: set_mp3 6@ perform_action 1 
+0001: wait 9000 ms 
+0AAE: release_mp3 6@ 
+004E: end_thread 

@@ -1,0 +1,26 @@
+// This file was decompiled using SASCM.ini published by GTAG (http://gtag.gtagaming.com/opcode-database) on 6.14.2013
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'ZAD' 
+
+
+
+:ZAD_11
+0001: wait 0 ms 
+00D6: if 
+0256:   player $PLAYER_CHAR defined 
+004D: jump_if_false @ZAD_11 
+if
+0AB0:  key_pressed 77 
+004D: jump_if_false @ZAD_11 
+33@ = 0.0
+0653: 33@ = float_stat 24 
+03F0: enable_text_draw 1 
+jump @w
+
+:w
+0092: 17@ = float_to_integer 33@ // local, local 
+045A: text_draw_1number  100.0  40.0 'NUMBER' 17@  
+03F0: set_text_draw_enabled 0
+jump @ZAD_11

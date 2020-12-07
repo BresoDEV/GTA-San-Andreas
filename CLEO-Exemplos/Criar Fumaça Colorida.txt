@@ -1,0 +1,26 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'NUCLEAR' 
+
+:NUCLEAR_11
+0001: wait 0 ms 
+00D6: if and
+0AB0:   key_pressed 8     //  backspace
+004D: jump_if_false @NUCLEAR_11 
+00A0: store_actor $PLAYER_ACTOR position_to 5@ 6@ 7@ 
+095C: create_smoke_at 5@ 6@ 7@ velocity 0.0 0.0 0.0 RGBA 206.0 9.0 201.0 1.0 size 0.5 last_factor 0.10
+0001: wait 0 ms 
+0002: jump @NUCLEAR_11 
+
+RGBA 1.0 1.0 1.0 1.0 = white
+RGBA 0.0 0.0 0.0 1.0 = black
+RGBA 0.0 0.0 1.0 1.0 = blue
+RGBA 0.0 1.0 0.0 1.0 = green
+RGBA 1.0 0.0 0.0 1.0 = red
+RGBA 1.0 1.0 0.0 1.0 = yellow
+RGBA 0.0 1.0 1.0 1.0 = turquoise
+RGBA 1.0 0.0 1.0 1.0 = pink

@@ -1,0 +1,52 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+0000: NOP 
+0A95: enable_thread_saving 
+
+:NONAME_4
+0001: wait 0 ms 
+00D6: if and
+0390: load_txd_dictionary "ROCK"    [precisa cria um TXD com o nome que estiver nessa linha]
+038F: load_texture "TAG" as 1 // Load dictionary with 0390 first         [nome da textura dentro do txd]
+03F0: enable_text_draw 0 
+03E3: set_texture_to_be_drawn_antialiased 1 
+038D: draw_texture 1 position 550.0 360.0 size 191.25 170.0 RGBA 255 255 255 255
+0002: jump @NONAME_4
+
+##########################################################################
+
+{$CLEO .cs}
+:Show_Textur
+03A4: name_thread "TXD"
+wait 1000
+
+:TXD_2
+wait 0
+if
+0256: player $PLAYER_CHAR defined
+jf @TXD_2
+if
+0AB0:   key_pressed 8//----- press Backspace to enable Textur
+jf @TXD_2
+0390: load_txd_dictionary "LD_DRV"
+038F: load_texture "bronze" as 1  
+
+:TXD_3
+wait 0
+if
+0256: player $PLAYER_CHAR defined
+jf @TXD_3
+03F0: enable_text_draw 1
+038D: draw_texture 1 position 580.0 400.0 size 120.5 90.0 RGBA 255 255 255 255
+if
+0AB0:   key_pressed 9//----- press Tab to disable textur
+jf @TXD_3
+
+:TXD_4
+03F0: enable_text_draw 0
+0391: release_txd_dictionary
+0002: jump @TXD_2

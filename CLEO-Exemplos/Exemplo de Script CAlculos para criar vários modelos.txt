@@ -1,0 +1,44 @@
+// This file was decompiled using sascm.ini published by Seemann (http://sannybuilder.com/files/SASCM.rar) on 13.10.2007
+
+{$VERSION 3.1.0027}
+{$CLEO .cs}
+
+//-------------MAIN---------------
+03A4: name_thread 'PUNK' 
+
+:PUNK_11
+0001: wait 0 ms 
+00D6: if 
+0AB0:   key_pressed 0x6F // (  /  ) teclado numérico
+004D: jump_if_false @PUNK_11 
+0247: load_model #NRG500 
+$VARIAVEL = 2498.593 
+$CONFIRMACAO = 1
+$COR_1 = 20
+$COR_2 = 25
+jump @PUNK_47
+
+:PUNK_47
+0001: wait 0 ms 
+if
+0248:   model #NRG500 available 
+004D: jump_if_false @PUNK_47
+00A5: $CARRO = create_car #NRG500 at $VARIAVEL -1666.7867 13.3466   //Groove Street
+0175: set_car $CARRO Z_angle_to 0.0
+0229: set_car $CARRO primary_color_to $COR_1 secondary_color_to $COR_2 
+$COR_1 += 2
+$COR_2 += 4
+$VARIAVEL -= 2.0
+$CONFIRMACAO += 1
+01C3: remove_references_to_car $CARRO // Like turning a car into any random car 
+jump @1
+
+:1
+wait 0
+if
+$CONFIRMACAO >= 10
+jf @PUNK_47
+0249: release_model #NRG500
+jump @PUNK_11
+ 
+

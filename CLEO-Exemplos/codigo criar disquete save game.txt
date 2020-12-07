@@ -1,0 +1,54 @@
+{$CLEO}
+wait 3000
+thread "MYSAVE"
+:MYSAVEPOINT
+0005: $POS_X = -2070.9458
+0005: $POS_Y = -102.2208 
+0005: $POS_Z = 41.965
+0005: $ACTOR_POS_X = -2074.7944
+0005: $ACTOR_POS_Y = -105.9476
+0005: $ACTOR_POS_Z = 41.9653
+0005: $ACTOR_POS_ROT_Z = 179.8083
+0004: $PICKUP_ID = 1277 // dynamic.ide - Do not use "#PICKUPSAVE" here!
+
+:MYSAVEPOINT_INIT
+0213: $MYSAVEPICKUPHANDLE = create_pickup $PICKUP_ID type 3 at $POS_X $POS_Y $POS_Z
+
+:MYSAVEPOINT_MAIN
+0001: wait 0 ms
+00D6: if 0
+0214: pickup $MYSAVEPICKUPHANDLE picked_up 
+004D: jump_if_false @MYSAVEPOINT_END
+0050: gosub @SHOW_SAVE_SCREEN
+00D6: if 0
+0256: player $PLAYER_CHAR defined 
+004D: jump_if_false @MYSAVEPOINT_END
+0215: destroy_pickup $MYSAVEPICKUPHANDLE
+0213: $MYSAVEPICKUPHANDLE = create_pickup $PICKUP_ID type 3 at $POS_X $POS_Y $POS_Z
+0395: clear_area 1 at $POS_X $POS_Y $POS_Z radius 1.0 
+00A1: put_actor $PLAYER_ACTOR at $ACTOR_POS_X $ACTOR_POS_Y $ACTOR_POS_Z
+0173: set_actor $PLAYER_ACTOR Z_angle_to $ACTOR_POS_ROT_Z
+0001: wait 0 ms 
+016A: fade 1 time 1000 
+
+:MYSAVEPOINT_END
+0002: jump @MYSAVEPOINT_MAIN
+
+:SHOW_SAVE_SCREEN
+01B4: set_player $PLAYER_CHAR can_move 0 
+03D8: show_save_screen 
+
+:SHOW_SAVE_SCREEN_WAIT
+0001: wait 0 ms 
+00D6: if 0
+83D9: not save_done 
+004D: jump_if_false @SHOW_SAVE_SCREEN_CONTINUE
+0002: jump @SHOW_SAVE_SCREEN_WAIT
+
+:SHOW_SAVE_SCREEN_CONTINUE
+0169: set_fade_color_RGB 0 0 0 
+016A: fade 0 time 1000 
+01B4: set_player $PLAYER_CHAR can_move 1 
+
+:SHOW_SAVE_SCREEN_RETURN
+0051: return 

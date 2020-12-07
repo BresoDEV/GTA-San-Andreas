@@ -1,0 +1,40 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ADDED
+00C3=3,get_memory_address %1d% type %2d% store_to %3d% 
+00C4=3,set_memory_address %1d% type %2d% to %3d% 
+0181=3,set_memory_adress %1d% size %2d% virtual_protect_to %3d% 
+;;;; --- CLEO 2 Opcodes ---
+;;;; version 2.0.0.31
+;;;; visit www.cleo.sannybuilder.com for more info
+;;;;-----------------------
+0A8C=4,write_memory %1d% size %2d% value %3d% virtual_protect %4d%
+0A8D=4,%4d% = read_memory %1d% size %2d% virtual_protect %3d%
+0A8E=3,%3d% = %1d% + %2d%; int
+0A8F=3,%3d% = %1d% - %2d%; int
+0A90=3,%3d% = %1d% * %2d%; int
+0A91=3,%3d% = %1d% / %2d%; int
+0A96=2,%2d% = actor %1d% struct
+0A97=2,%2d% = car %1d% struct
+0A98=2,%2d% = object %1d% struct
+0A99=1,chdir %1b:userdir/rootdir%
+0A9A=3,%3d% = openfile %1s% mode %2d% // IF and SET
+0A9B=1,closefile %1d%
+0A9C=2,%2d% = file %1d% size
+0A9D=3,readfile %1d% size %2d% to %3d%
+0A9E=3,writefile %1d% size %2d% from %3d%
+0A9F=1,%1d% = current_thread_pointer
+0AA0=1,gosub_if_false %1p%
+0AA1=0,return_if_false
+0AA2=2,%2h% = load_library %1s% // IF and SET
+0AA3=1,free_library %1h%
+0AA4=3,%3d% = get_proc_address %1s% library %2d% // IF and SET
+0AA5=-1,call %1d% num_params %2h% pop %3h%
+0AA6=-1,call_method %1d% struct %2d% params %3h% pop %4h%
+0AA7=-1,call_function %1d% params %2h% pop %3h%
+0AA8=-1,call_function_method %1d% struct %2d% params %3h% pop %4h%
+0AA9=0,  is_game_version_original
+;0AAA reserved due to cool name;)
+0AAB=1,  file_exists %1s%
+0AAC=2,%2d% = load_mp3 %1d%
+0AAD=2,set_mp3 %1d% perform_action %2d%
+0AAE=1,release_mp3 %1d%
+0AAF=2,%2d% = get_mp3_length %1d%

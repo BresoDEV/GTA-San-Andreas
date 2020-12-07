@@ -1,0 +1,23 @@
+{$CLEO .cs}
+thread 'cheat'
+
+:Cheatcode_1
+wait 0
+0A8D: 1@ = read_memory 0x00969110 size 4 virtual_protect 0 //
+0A8D: 2@ = read_memory 0x00969114 size 4 virtual_protect 0 //
+if  and
+04A4:   1@ == 0x52414D50 //checks if 1@ = RAMP
+04A4:   2@ == 0x4A554D50 //checks if 2@ = JUMP
+004D: jump_if_false @Cheatcode_1
+03E5: text_box 'CHEAT1'
+0A8C: write_memory 0x00969110 size 4 value 0 virtual_protect 0 //clear the buffer
+0A8C: write_memory 0x00969114 size 4 value 0 virtual_protect 0 //clear the buffer
+
+
+
+
+
+
+
+
+Colocar esse texto antes das funções do mod,,,,,

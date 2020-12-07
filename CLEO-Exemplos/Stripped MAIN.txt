@@ -1,0 +1,72 @@
+DEFINE OBJECTS 1
+DEFINE OBJECT (noname)                
+
+DEFINE MISSIONS 0
+
+DEFINE EXTERNAL_SCRIPTS -1
+
+DEFINE UNKNOWN_EMPTY_SEGMENT 0
+
+DEFINE UNKNOWN_THREADS_MEMORY 0
+
+//-------------MAIN---------------
+thread 'MAIN'
+fade 0 0
+042C: set_total_missions_to 0
+030D: set_max_progress 0
+01F0: set_max_wanted_level_to 2
+set_wb_check_to 0
+set_weather 0
+01B7: release_weather
+0209: 0@ = random_int_in_ranges 0 24
+00C0: set_current_time_hours_to 0@ minutes_to 0
+0208: 0@ = random_float_in_ranges -3000.0 3000.0
+0208: 1@ = random_float_in_ranges -3000.0 3000.0
+2@ = -100.0
+04E4: unknown_refresh_game_renderer_at 0@ 1@
+Camera.SetAtPos(0@, 1@, 2@)
+$PLAYER_CHAR = Player.Create(#NULL, 0@, 1@, 2@)
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+07AF: $PLAYER_GROUP = player $PLAYER_CHAR group
+0180: set_on_mission_flag_to $ONMISSION // Note: your missions have to use the variable defined here
+$DEFAULT_WAIT_TIME = 250
+Player.SetClothes($PLAYER_CHAR, "BBALLJACKRSTAR", "BBJACK", Torso)
+Player.SetClothes($PLAYER_CHAR, "PLAYER_FACE", "HEAD", Head)
+Player.SetClothes($PLAYER_CHAR, "JEANSDENIM", "JEANS", Legs)
+Player.SetClothes($PLAYER_CHAR, "SNEAKERBINCBLK", "SNEAKER", Shoes)
+Player.Build($PLAYER_CHAR)
+0629: change_integer_stat 181 to 4
+
+// PUT YOUR CREATE_THREAD COMMANDS HERE!!!
+
+wait 1000
+Player.CanMove($PLAYER_CHAR) = True
+03E6: remove_text_box
+fade 1 2500
+
+:MAIN_299
+wait $DEFAULT_WAIT_TIME
+077E: get_active_interior_to $ACTIVE_INTERIOR
+0652: $STAT_UNLOCKED_CITIES_NUMBER = integer_stat 181
+07D0: $WEEKDAY = weekday
+09FB: $CURRENT_LANGUAGE = current_language
+0842: $CURRENT_TOWN_NUMBER = player $PLAYER_CHAR town_number
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+if or
+  Player.Wasted($PLAYER_CHAR)
+0741:   actor $PLAYER_ACTOR busted
+jf @MAIN_299
+04C4: store_coords_to 1@ 2@ 3@ from_actor $PLAYER_ACTOR with_offset 0.0 0.0 0.0
+0208: 0@ = random_float_in_ranges 0.0 360.0
+016C: restart_if_wasted_at 1@ 2@ 3@ angle 0@ town_number 0
+016D: restart_if_busted_at 1@ 2@ 3@ angle 0@ town_number 0
+
+:MAIN_437
+wait $DEFAULT_WAIT_TIME
+if and
+  not Player.Wasted($PLAYER_CHAR)
+8741:   not actor $PLAYER_ACTOR busted
+jf @MAIN_437
+jump @MAIN_299
+
+// PUT YOUR THREADS HERE!!!

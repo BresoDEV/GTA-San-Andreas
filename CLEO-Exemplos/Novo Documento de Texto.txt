@@ -1,0 +1,4 @@
+// carro leve, quanto mais alto o float, mais leve
+0A97: 1@ $CARRO
+0A8E: 2@ = 1@ + 144   // int  
+0A8C: write_memory 2@  size 4 value 30000.000 virtual_protect 0   //desativa 
